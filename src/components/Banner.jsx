@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import headerImg from "../assets/img/shosan-pics-small.png";
 import TrackVisibility from 'react-on-screen';
-import "../../node_modules/animate.css/animate.css";
-// import { ArrowRightCircle } from 'react-bootstrap-icons';
+import "animate.css";
+
 
 
 
@@ -23,8 +23,7 @@ const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text])
+  })
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -59,11 +58,17 @@ const Banner = () => {
       <div className="flex justify-around items-center text-white absolute z-[1] top-[15%]">
 
         <div className="w-[47%] md:ml-4">
+        
           <TrackVisibility>
-            {({ isVisible }) => 
-            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
 
-              <span className="flex items-center tagline rounded-[5px] md:text-[20px] pl-2 py-2">Hi, I&apos;m Kenny</span>
+            {({ isVisible }) => 
+            <div className={`${isVisible ? "animate__animated animate__fadeIn" : ""} nameDiv`}>
+
+              <div className="flex justify-start items-center tagline rounded-[5px] w-[40%] h-[55px] ">
+                <span className="md:text-[20px] text-center ml-5">
+                Hi, I&apos;m Kenny
+                </span>
+              </div>
 
               <h1 className="md:text-[50px] font-semibold md:mb-4">{`I'm a`} 
                 <span data-period="1000" className="txt-rotate">
@@ -80,20 +85,26 @@ const Banner = () => {
                 As a team player, and one who loves building new relationships, I enjoy working with other
                 professionals who are striving to achieve a common goal/result.
               </p>
-              <a href="#connect"
-                className="flex items-center font-poppins font-bold tagline2 rounded-[5px] md:text-[16px] 
-                  pl-2 py-2"
-              >Let&apos;s Connect
-              </a>
+
+              <div className="flex justify-start items-center taglineButton rounded-[5px] w-[40%] h-[60px]">
+                <a href="#connect"
+                  className="font-poppins font-bold text-center md:text-[20px] ml-5">
+                  Let&apos;s Connect
+                </a>
+              </div>
+
             </div>}
+
           </TrackVisibility>
+
         </div>
 
         <div className="flex justify-center items-center w-[40%] md:-mt-12">
-          <TrackVisibility>
+          <TrackVisibility className="w-full">
             {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                <img src={headerImg} alt="Header Img" />
+              <div className={`${isVisible ? "animate__animated animate__zoomIn" : ""} w-full`}>
+                <img src={headerImg} alt="Header Img" 
+                  className="w-[98%] h-[98%]" />
               </div>}
           </TrackVisibility>
         </div>

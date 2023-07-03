@@ -94,46 +94,46 @@
 }
 
 .tagline {
-  width: 180px;
-  height: 55px;
   font-weight: 700;
   letter-spacing: 0.8px;
   background: linear-gradient(90.21deg, #aa367c80 -5.91%, #4a2fbd80 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
   margin-bottom: 16px;
-  display: inline-block;
 }
 
-.tagline2 {
-  width: 180px;
-  height: 45px;
+.nameDiv .taglineButton {
   font-weight: 700;
-  letter-spacing: 0.8px;
-  background: linear-gradient(90.21deg, rgba(245, 245, 243, 0.5) -5.91%, rgba(29, 29, 28, 0.5) 111.58%);
-  border: 2px solid rgba(117, 6, 243, 0.5);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
-  transition: 1s ease-in-out;
-}
-
-.tagline2:hover {
-  background: linear-gradient(90.21deg, #aa367c80 -5.91%, #4a2fbd80 111.58%);
-  transition: 1s ease-in-out;
-}
-
-.tagline2::before {
-  content: "";
-  background: #121212;
-  width: 0;
-  height: 100%;
+  color: #97b1e9;
+  background: linear-gradient(90.21deg, rgba(196, 88, 152, 0.3) -5.91%, rgba(91, 69, 192, 0.3) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
   transition: 0.3s ease-in-out;
 }
-
-.tagline2:hover::before {
+.nameDiv .taglineButton a {
+  z-index: 1;
+  position: relative;
+}
+.nameDiv .taglineButton:hover {
+  color: #fff;
+}
+.nameDiv .taglineButton::before {
+  content: "";
+  background: linear-gradient(90.21deg, rgba(245, 245, 243, 0.5) -5.91%, rgba(29, 29, 28, 0.5) 111.58%);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.nameDiv .taglineButton:hover::before {
   width: 100%;
 }
+
+
+
+
 
 .navText1{
   text-shadow: 0 0 7px rgb(42, 16, 185);

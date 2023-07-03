@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #131222 91.61%
+  );
+  --white-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #e2dfdf -78.47%,
+    #b0b0bb 91.61%
+  );
+  --bg-text-gradient: linear-gradient(
+      180.00deg,
+      #f6fafa 0.89%,
+      #d0eff0 17.23%,
+      #7abbe6 42.04%,
+      #5995ee 55.12%,
+      #584edf 71.54%,
+      #1f22c4 100%
+    );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+
+
+
+
+
+
+
+/************************************* BEGINNING OF SHOSAN PORTFOLIO CSS *********************************/
+
+@font-face {
+	font-family: Centra3;
+	src: url('./assets/font/CentraNo2-Bold.ttf');
+}
+@font-face {
+	font-family: Centra2;
+	src: url('./assets/font/CentraNo2-Medium.ttf');
+}
+@font-face {
+	font-family: Centra1;
+	src: url('./assets/font/CentraNo2-Book.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.main-bg{
+  width: 100%;
+  background-image: url('./assets/img/banner-bg.png');
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
+.text-grad {
+  background: linear-gradient(
+    180.00deg,
+    #aa367c80 0.89%,
+    #926e8480 17.23%,
+    #8b6ea3 42.04%,
+    #7c43c7 55.12%,
+    #3f36be 71.54%,
+    #4a2fbd80 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-text-grad {
+  background: linear-gradient(
+    180.00deg,
+    #aa367c80 0.89%,
+    #926e8480 17.23%,
+    #8b6ea3 42.04%,
+    #7c43c7 55.12%,
+    #3f36be 71.54%,
+    #4a2fbd80 100%
+  );
+}
+
+.tagline {
+  width: 180px;
+  height: 55px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90.21deg, #aa367c80 -5.91%, #4a2fbd80 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.tagline2 {
+  width: 180px;
+  height: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90.21deg, rgba(245, 245, 243, 0.5) -5.91%, rgba(29, 29, 28, 0.5) 111.58%);
+  border: 2px solid rgba(117, 6, 243, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+  transition: 1s ease-in-out;
+}
+
+.tagline2:hover {
+  background: linear-gradient(90.21deg, #aa367c80 -5.91%, #4a2fbd80 111.58%);
+  transition: 1s ease-in-out;
+}
+
+.tagline2::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.tagline2:hover::before {
+  width: 100%;
+}
+
+.navText1{
+  text-shadow: 0 0 7px rgb(42, 16, 185);
+}
+
+.navText2{
+  text-shadow: 0 0 1px rgb(219, 189, 15);
+}
+
+.skill {
+  padding: 0 0 50px 0;
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+}
+.skill h2 {
+  color: white;
+	font-size: 45px;
+	font-weight: 700;
+}
+.skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  bottom: 0;
+  width: 40%;
+}
+
+
+
+.project {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
+.project h2 {
+  color: white;
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+
+.contact {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  padding: 60px 0 200px 0;
+}
+.contact img {
+  width: 92%;
+}
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: #fff;
+}
+.contact form button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+
+
+
+
+
+
+/******************************************* END OF SHOSAN PORTFOLIO CSS *************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+.text-gradient {
+  background: linear-gradient(
+    180.00deg,
+    #f6fafa 0.89%,
+    #d0eff0 17.23%,
+    #7abbe6 42.04%,
+    #5995ee 55.12%,
+    #584edf 71.54%,
+    #1f22c4 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-text-gradient {
+  background: linear-gradient(
+    180.00deg,
+    #f6fafa 0.89%,
+    #d0eff0 17.23%,
+    #7abbe6 42.04%,
+    #5995ee 55.12%,
+    #584edf 71.54%,
+    #1f22c4 100%
+  );
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feature-card {
+  background: var(--white-gradient);
+}
+
+.feature-card2 {
+  background: var(--white-gradient);
+}
+
+.feedback-card2 {
+  background: var(--black-gradient);
+}
+
+.feedback-card3 {
+  background: var(--white-gradient);
+}
+
+/* .feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+} */
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--white-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+.newline {
+  white-space: pre-line;
+}
+
+.del{
+  color: #00040f;
+  color: #010718;
+  color: #00f6ff;
+  color: #ffffffb3;
+  color: #09977c1a;
+}
+
+
+
+
+
+/* //////////////////////////////////====CONTACT FORM CSS====///////////////////////////////////// */
+
+
+.form__content{
+  display: grid;
+  row-gap: 1.0rem;
+  padding: 4px;
+}
+
+.form__input,
+.form__messageInput,
+.form__submit{
+  border-bottom-color: #1f22c4;
+  border-bottom-width: 1px;
+  outline: none;
+}
+
+.form__box{
+  position: relative;
+  width: 98%;
+  margin: auto;
+}
+
+.form__shadow{
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3452b3;
+  opacity: .6;
+  outline: none;
+  border-width: 0;
+}
+
+.form__messageShadow{
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3452b3;
+  opacity: .6;
+  outline: none;
+  border-width: 0;
+}
+
+.form__input{
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  transition: transform .5s;
+}
+
+.form__input::placeholder{
+  color: #14101d;
+  padding-left: 5px;
+}
+
+.form__messageInput::placeholder{
+  color: #14101d;
+}
+
+.form__messageInput{
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(223, 219, 219);
+  padding: 3px;
+  z-index: 2;
+  transition: transform .5s;
+}
+
+.form__button{
+  border-radius: 8px;
+  position: relative;
+  justify-self: center;
+  background-color: #214d76;
+  width: 50%;
+  height: 40px;
+}
+
+.form__submit{
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  background-color: #0c1488;
+  cursor: pointer;
+  transition: transform .3s;
+  z-index: 2;
+}
+
+
+.form__submit:focus{
+  position: absolute;
+  transform: translate(-3px, -3px);
+  z-index: 2;
+}
+
+.form__submit:hover{
+  background-color: #3113b6;
+  transition: 1s;
+  transform: translate(-4px, -4px);
+}
+
+.form__input:focus::placeholder{
+  opacity: 0;
+  transition: .5s;
+}
+
+.form__messageInput:focus::placeholder{
+  opacity: 0;
+  transition: .5s;
+}
+
+.form__input:focus,
+.form__input:not(:placeholder-shown).form__input:not(:focus),
+.form__messageInput:focus,
+.form__messageInput:not(:placeholder-shown).form__messageInput:not(:focus){
+  transform: translate(-2px, -2px);
+}
+
+.sent{
+  background-color: #0cb335;
+}
+
+.reject{
+  background-color: #b33b0c;
+}
+
+.default{
+  background-color: #07064e;
+}
+
+.error-default{
+  background-color: #07064e;
+}
+
+
+
+/* //////////////////////////////////====END OF CONTACT FORM CSS====///////////////////////////////////// */
+
+
+.editor{
+  color: black;
+  background-color: white;
+}
+
+
+
+
+
+
+
+

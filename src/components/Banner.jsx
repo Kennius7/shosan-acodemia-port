@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import headerImg from "../assets/img/shosan-pics-small.png";
 import TrackVisibility from 'react-on-screen';
 import "animate.css";
+import ConnectButton from "./ConnectButton";
 
 
 
@@ -12,8 +13,6 @@ const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  // eslint-disable-next-line no-unused-vars
-  const [index, setIndex] = useState(1);
   const toRotate = [" Web Developer", "n App Developer", " Video Editor"];
   const period = 2000;
 
@@ -33,20 +32,16 @@ const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
+      setDelta(prevDelta => prevDelta / 1.5);
     }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
     }
   }
 
@@ -55,14 +50,14 @@ const Banner = () => {
   return (
     <section id="home" className={`flex flex-row justify-center items-start relative w-full h-[700px]`}>
 
-      <div className="flex justify-around items-center text-white absolute z-[1] top-[15%]">
+      <div className="flex justify-around items-center text-white absolute z-[1] top-[15%] w-full">
 
         <div className="w-[47%] md:ml-4">
         
-          <TrackVisibility>
+          <TrackVisibility className="w-full">
 
             {({ isVisible }) => 
-            <div className={`${isVisible ? "animate__animated animate__fadeIn" : ""} nameDiv`}>
+            <div className={`${isVisible ? "animate__animated animate__fadeIn" : ""} w-full`}>
 
               <div className="flex justify-start items-center tagline rounded-[5px] w-[40%] h-[55px] ">
                 <span className="md:text-[20px] text-center ml-5">
@@ -71,7 +66,7 @@ const Banner = () => {
               </div>
 
               <h1 className="md:text-[50px] font-semibold md:mb-4">{`I'm a`} 
-                <span data-period="1000" className="txt-rotate">
+                <span className="txt-rotate">
                   <span className="wrap">
                     {text}
                   </span>
@@ -86,12 +81,16 @@ const Banner = () => {
                 professionals who are striving to achieve a common goal/result.
               </p>
 
-              <div className="flex justify-start items-center taglineButton rounded-[5px] w-[40%] h-[60px]">
-                <a href="#connect"
-                  className="font-poppins font-bold text-center md:text-[20px] ml-5">
-                  Let&apos;s Connect
-                </a>
-              </div>
+              <ConnectButton 
+                mdWidthPercent={60}
+                mdHeightPixel={50}
+                smWidthPercent={50}
+                smHeightPixel={50}
+                xsWidthPercent={40}
+                xsHeightPixel={50}
+                WidthPercent={30}
+                HeightPixel={40}
+                />
 
             </div>}
 

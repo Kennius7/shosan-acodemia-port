@@ -1,4 +1,4 @@
-// import colorSharp from "../assets/img/color-sharp.png";
+import ConnectButton from "./ConnectButton";
 
 
 
@@ -24,14 +24,17 @@ const AboutMe = () => {
   // };
 
   return (
-    <section 
-      className="skill w-full h-[550px] relative flex flex-col justify-center items-center" 
-      id="aboutme">
-      <div className="skill-bx flex flex-col justify-center items-center w-[80%] absolute z-[1] -top-[25%]">
+    <section id="aboutme"
+      className="skill w-full h-[550px] relative flex flex-col justify-center items-center">
+
+      <div className="flex flex-col justify-center items-start rounded-[64px] bg-black/90 w-[80%] 
+        absolute z-[1] -top-[10%] pl-[150px] py-[60px]">
+
           <div className="font-poppins text-center font-bold text-white text-[45px] mb-6">
             About me
           </div>
-          <div className="w-[78%] text-gray-300 text-start italic text-[16px] mb-6 leading-[25px]">
+
+          <div className="w-[80%] text-gray-300 text-start italic text-[17px] mb-6 leading-[25px]">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a software 
             programmer, as well as a graphics designer, 
             video editor, and an audio editor. Presently, I am the CEO of Shosan&apos;s Acodemia, a startup 
@@ -50,12 +53,21 @@ const AboutMe = () => {
             development, mobile app development, video creation 
             and graphics design services , etc. at affordable prices tailored to your business needs.
           </div>
-          <a href="#connect"
-            className="flex items-center font-poppins font-bold tagline2 rounded-[5px] md:text-[16px] 
-              pl-2 py-2"
-          >Let&apos;s Connect
-          </a>
+
+          <div className="w-full mt-6">
+            <ConnectButton 
+              mdWidthPercent={60}
+              mdHeightPixel={50}
+              smWidthPercent={50}
+              smHeightPixel={50}
+              xsWidthPercent={40}
+              xsHeightPixel={50}
+              WidthPercent={30}
+              HeightPixel={40}/>
+          </div>
+
       </div>
+
     </section>
   )
 }

@@ -2,8 +2,9 @@ import facebookIcon from "../assets/img/Mfacebook.svg";
 import gitHubIcon from "../assets/img/github4.svg";
 import instagramIcon from "../assets/img/Minstagram.svg";
 import linkedInIcon from "../assets/img/Mlinkedin.svg";
-import whatsappIcon from "../assets/img/Shield.svg";
-import phoneIcon from "../assets/img/Discount.svg";
+import whatsappIcon from "../assets/img/whatsapp-icon1.png";
+import phoneIcon from "../assets/img/phone-icons-white.png";
+import emailIcon from "../assets/img/email-icons-white.png";
 
 
 
@@ -62,7 +63,7 @@ function Footer() {
                                 </li>
                                 <li className="sm:mb-2 ss:mb-2">
                                     <a href="#" className="flex flex-row justify-start items-center">
-                                        <img src={phoneIcon} alt="email" className="w-[15px] 
+                                        <img src={emailIcon} alt="email" className="w-[15px] 
                                         h-[15px] ss:w-[20px] ss:h-[20px]"/>
                                         <span className={`md:text-[15px] sm:text-[20px] xs:text-[13px] 
                                         text-[15px] tracking-[-1px] xs:tracking-[0px]`}>shinjinchu@gmail.com</span>

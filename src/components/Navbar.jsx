@@ -65,10 +65,13 @@ function Navbar() {
                 <a href="/">
                     <div className="w-full flex flex-col justify-center items-center">
                         <div className={`${scrolled
-                            ? "md:text-[16px] sm:text-[35px] xs:text-[20px] text-[17px] duration-1000"
-                            : "md:text-[18px] sm:text-[40px] xs:text-[22px] text-[20px] duration-1000"} 
+                            ? "md:text-[19px] sm:text-[35px] xs:text-[20px] text-[17px] duration-1000"
+                            : "md:text-[22px] sm:text-[40px] xs:text-[22px] text-[20px] duration-1000"} 
                             font-semibold text-white w-full flex justify-start items-center`}>
-                            Shosan&apos;s <span className="text-grad">&nbsp;Acodemia</span>
+                            Shosan&apos;s
+                            <span className="text-grad">
+                                &nbsp;Acodemia
+                            </span>
                         </div>
                     </div>
                 </a>

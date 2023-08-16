@@ -6,12 +6,21 @@ import features05 from "../assets/img/Meter-60.png";
 import features06 from "../assets/img/Meter-97.png";
 import features07 from "../assets/img/Meter-90.png";
 import features08 from "../assets/img/Meter-90.png";
+import colorSharpPics1 from "../assets/img/color-sharp.png";
+import colorSharpPics2 from "../assets/img/color-sharp2.png";
+import { useContext } from "react";
+import { AppContext } from "./context/AppContext";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/css";
 
 
 
 
 
 const Skills = () => {
+
+  const { skillRef } = useContext(AppContext);
   
   const featureSlide = [
     {
@@ -72,40 +81,94 @@ const Skills = () => {
     },
   ];
 
+  const splideOptions = {
+    // width: "90%",
+    perPage: 3,
+    perMove: 1,
+    type: 'loop',
+    keyboard: 'global',
+    autoplay: true,
+    rewind: true,
+    rewindSpeed: "1000",
+    isNavigation: true,
+    arrows: true,
+    focus: 0,
+    start: 0,
+    interval: 1000,
+    easing: "cubic-bezier()",
+    gap: '0.5rem',
+    pagination: false,
+    extensions: { AutoScroll },
+    autoScroll: {
+        speed: 1,
+        pauseOnHover: true,
+        pauseOnFocus: false,
+    },
+    padding: '1rem',
+    mediaQuery: "min",
+    breakpoints: {
+      1000: { perPage: 3},
+      700: { perPage: 2},
+      400: { perPage: 2},
+      200: { perPage: 1},
+    },
+};
+
+
 
   return (
-    <section 
-      className="skill w-full h-[780px] relative flex flex-col justify-center items-center" 
-      id="skills"
-    >
-      <div className="skill-bx w-[90%] absolute z-[1] top-[10%]">
-        <div className="-mt-6 -mb-6">
-          <h2 className="tracking-widest">Skills</h2>
-          <p className="text-[16px] italic tracking-wider">These are some of my skills and competencies acquired over the years</p>
+    <section ref={skillRef}
+      className="skill w-full h-[780px] relative flex flex-col justify-center items-center">
+
+      <div className="w-full absolute z-[1] top-[10%]">
+
+        <div className="flex flex-col justify-center items-start my-10 pl-[200px]">
+          <h2 className="text-start tracking-widest text-[45px] mb-2">Skills</h2>
+          <p className="text-start font-semibold text-[25px] font-poppins tracking-wider">
+            These are some of my skills and competencies acquired over the years
+          </p>
         </div>
 
-        <div className="w-full flex-wrap flex justify-center items-center">
-          {featureSlide.map((card) => (
-              <div key={card.id} className="w-[20%] flex flex-col justify-center items-center m-5">
+        <div className="rounded-[64px] bg-black/95 w-[80%] h-[500px] m-auto pt-24">
+          <Splide options={splideOptions}>
+              {featureSlide.map((card) => (
+                <SplideSlide key={card.id}>
+                  <div className="w-full flex flex-col justify-center items-center">
 
-                <div className="w-full flex flex-col justify-center items-center relative">
-                  <img src={card.img} alt={card.name} className="w-[95%] h-[95%] bg-center bg-cover" />
-                  <div className="absolute z-[2] top-[45%] right-[40%] text-white font-semibold tracking-wider">
-                    {card.percent}
+                    <div className="w-[90%] flex flex-col justify-center items-center relative">
+
+                      <img 
+                        src={card.img} 
+                        alt={card.name} 
+                        className="w-[86%] h-[86%] bg-center bg-cover"/>
+
+                      <div className="absolute z-[2] top-[45%] right-[41%] text-white 
+                        font-semibold italic text-[25px]">
+                        {card.percent}
+                      </div>
+
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center">
+                      <div className="font-poppins font-semibold text-center text-[25px] text-grad">
+                        {card.name}
+                      </div>
+                      <div className="font-poppins italic text-center text-[18px] text-dimWhite">
+                        {card.title}
+                      </div>
+                    </div>
+
                   </div>
-                </div>
-                
-                <div className="flex flex-col w-[300px] justify-center items-center">
-                  <div className="font-poppins font-semibold text-center text-[17px] text-grad">
-                    {card.name}
-                  </div>
-                  <div className="font-poppins italic text-center text-[13px] text-dimWhite w-[50%]">
-                    {card.title}
-                  </div>
-                </div>
-              </div>
-          ))}
+                </SplideSlide>
+              ))}
+          </Splide>
         </div>
+
+      </div>
+
+      <div className="flex justify-between items-center absolute z-2 top-[55%] w-full">
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
       </div>
       
     </section>

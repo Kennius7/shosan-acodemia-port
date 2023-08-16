@@ -1,19 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import headerImg from "../assets/img/shosan-pics-small.png";
-import TrackVisibility from 'react-on-screen';
-import "animate.css";
-import ConnectButton from "./ConnectButton";
+import colorSharpPics1 from "../assets/img/color-sharp.png";
+import colorSharpPics2 from "../assets/img/color-sharp2.png";
+import WhatsappButton from "./WhatsappButton";
+import { AppContext } from "./context/AppContext";
+
 
 
 
 
 const Banner = () => {
+  const { homeRef } = useContext(AppContext);
 
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = [" Web Developer", "n App Developer", " Video Editor"];
+  const toRotate = [" Web Developer", "n App Developer", " Video Editor", " Graphic Designer"];
   const period = 2000;
 
   useEffect(() => {
@@ -48,66 +51,66 @@ const Banner = () => {
 
 
   return (
-    <section id="home" className={`flex flex-row justify-center items-start relative w-full h-[700px]`}>
+    <section id="home" ref={homeRef}
+      className={`flex flex-row justify-center items-start relative w-full h-[700px]`}>
 
       <div className="flex justify-around items-center text-white absolute z-[1] top-[15%] w-full">
 
         <div className="w-[47%] md:ml-4">
         
-          <TrackVisibility className="w-full">
+          <div className="w-full">
 
-            {({ isVisible }) => 
-            <div className={`${isVisible ? "animate__animated animate__fadeIn" : ""} w-full`}>
+            <div className="flex justify-start items-center tagline rounded-[5px] w-[40%] h-[55px] ">
+              <span className="md:text-[20px] text-center ml-5">
+              Hi, I&apos;m Kenny
+              </span>
+            </div>
 
-              <div className="flex justify-start items-center tagline rounded-[5px] w-[40%] h-[55px] ">
-                <span className="md:text-[20px] text-center ml-5">
-                Hi, I&apos;m Kenny
+            <h1 className="md:text-[50px] font-semibold md:mb-4">{`I'm a`} 
+              <span className="txt-rotate">
+                <span className="wrap">
+                  {text}
                 </span>
-              </div>
+              </span>
+            </h1>
 
-              <h1 className="md:text-[50px] font-semibold md:mb-4">{`I'm a`} 
-                <span className="txt-rotate">
-                  <span className="wrap">
-                    {text}
-                  </span>
-                </span>
-              </h1>
+            <p className="w-full md:text-[17px] md:mb-6">
+              I love the idea of using software to design solutions and troubleshooting 
+              complex problems. I believe in the power of programming to transform and build unique 
+              digital experiences.<br /> <br />
+              As a team player, and one who loves building new relationships, I enjoy working with other
+              professionals who are striving to achieve a common goal/result.
+            </p>
 
-              <p className="w-full md:text-[17px] md:mb-6">
-                I love the idea of using software to design solutions and troubleshooting 
-                complex problems. I believe in the power of programming to transform and build unique 
-                digital experiences.<br /> <br />
-                As a team player, and one who loves building new relationships, I enjoy working with other
-                professionals who are striving to achieve a common goal/result.
-              </p>
+            <WhatsappButton 
+              mdWidthPercent={60}
+              mdHeightPixel={50}
+              smWidthPercent={50}
+              smHeightPixel={50}
+              xsWidthPercent={40}
+              xsHeightPixel={50}
+              WidthPercent={30}
+              HeightPixel={40}
+              buttonText="Let's Connect on"
+              linkString="#connect"
+            />
 
-              <ConnectButton 
-                mdWidthPercent={60}
-                mdHeightPixel={50}
-                smWidthPercent={50}
-                smHeightPixel={50}
-                xsWidthPercent={40}
-                xsHeightPixel={50}
-                WidthPercent={30}
-                HeightPixel={40}
-                />
-
-            </div>}
-
-          </TrackVisibility>
+          </div>
 
         </div>
 
-        <div className="flex justify-center items-center w-[40%] md:-mt-12">
-          <TrackVisibility className="w-full">
-            {({ isVisible }) =>
-              <div className={`${isVisible ? "animate__animated animate__zoomIn" : ""} w-full`}>
-                <img src={headerImg} alt="Header Img" 
-                  className="w-[98%] h-[98%]" />
-              </div>}
-          </TrackVisibility>
+        <div className="flex justify-center items-center w-[40%] md:-mt-12 animate-pulse">
+          <div className="w-full">
+            <img src={headerImg} alt="Header Img" 
+              className="w-[98%] h-[98%]" />
+          </div>
         </div>
 
+      </div>
+
+      <div className="flex justify-between items-center absolute z-2 top-[70%] w-full">
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
       </div>
 
     </section>

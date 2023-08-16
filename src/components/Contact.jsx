@@ -1,8 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import contactImg from "../assets/img/contact-img.svg";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import { AppContext } from "./context/AppContext";
+
+
+
 
 const Contact = () => {
   const formInitialDetails = {
@@ -13,9 +15,10 @@ const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Send Message');
   const [status, setStatus] = useState({});
   const form = useRef();
+  const { connectRef } = useContext(AppContext);
 
   const onFormUpdate = (category, value) => {
       setFormDetails({
@@ -61,88 +64,89 @@ const Contact = () => {
 
 
   return (
-    <section id="connect" 
-      className="contact w-full">
+    <section ref={connectRef} className="contact flex justify-center items-center w-full h-[800px]">
 
       <div className="w-full flex flex-row-reverse justify-center items-center">
 
-        <div className="w-[50%]">
-          <TrackVisibility>
-            {
-              ({ isVisible }) =>
-              <img src={contactImg} alt="Contact Us"
-                className={isVisible ? "animate__animated animate__zoomIn" : ""}/>
-            }
-          </TrackVisibility>
+        <div className="w-[49%]">
+          <img src={contactImg} alt="Contact Us" className="w-full h-auto"/>
         </div>
 
-        <div className="w-[50%]">
+        <div className="w-[47%]">
 
-          <TrackVisibility className="w-full">
-            {({ isVisible }) =>
-              <div className={`${isVisible ? "animate__animated animate__fadeIn" : ""} w-full`}>
+          <div className={`w-full`}>
 
-                <h2>Get In Touch</h2>
+            <h2 className="text-[45px] font-bold mb-[30px] text-white">Get In Touch</h2>
 
-                <form ref={form} onSubmit={handleSubmit}>
-                
-                  <div>
+            <form ref={form} onSubmit={handleSubmit}>
+            
+              <div>
 
+                <div>
+                  <input type="text" 
+                    value={formDetails.firstName} 
+                    placeholder="First Name" 
+                    onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                    className="text-[18px] mb-3 py-3 pl-3 placeholder:text-[16px] placeholder:font-semibold"/>
+                </div>
+
+                <div>
+                  <input type="text" 
+                    value={formDetails.lastName} 
+                    placeholder="Last Name" 
+                    onChange={(e) => onFormUpdate('lastName', e.target.value)} 
+                    className="text-[18px] mb-3 py-3 pl-3 placeholder:text-[16px] placeholder:font-semibold"/>
+                </div>
+
+                <div>
+                  <input type="email" 
+                    value={formDetails.email} 
+                    placeholder="Email Address" 
+                    onChange={(e) => onFormUpdate('email', e.target.value)}
+                    className="text-[18px] mb-3 py-3 pl-3 placeholder:text-[16px] placeholder:font-semibold"/>
+                </div>
+
+                <div>
+                  <input type="tel" 
+                    value={formDetails.phone} 
+                    placeholder="Phone No." 
+                    onChange={(e) => onFormUpdate('phone', e.target.value)}
+                    className="text-[18px] mb-3 py-3 pl-3 placeholder:text-[16px] placeholder:font-semibold"/>
+                </div>
+
+                <div>
+                  <textarea type="text" 
+                    value={formDetails.message} 
+                    placeholder="Message" 
+                    onChange={(e) => onFormUpdate('message', e.target.value)}
+                    className="text-[18px] mb-3 py-3 pl-3 placeholder:text-[16px] placeholder:font-semibold">
+                  </textarea>
+                </div>
+
+                <button type="submit" className="rounded-3">
+                  <span>{buttonText}</span>
+                </button>
+
+                <div className="flex flex-col justify-center items-start navText3 mt-3 pl-2">
+                  {
+                    status.message &&
                     <div>
-                      <input type="text" 
-                        value={formDetails.firstName} 
-                        placeholder="First Name" 
-                        onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                      <p className={`${status.success === false ? "text-black" : "text-green-400"} 
+                        text-[18px] italic`}>
+                      {status.message}
+                      </p>
+                    </div> || 
+                    <div className="text-white text-[18px] italic">
+                      I&apos;d like to hear from you...
                     </div>
+                  }
+                </div>
 
-                    <div>
-                      <input type="text" 
-                        value={formDetails.lastName} 
-                        placeholder="Last Name" 
-                        onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
-                    </div>
+              </div>
 
-                    <div>
-                      <input type="email" 
-                        value={formDetails.email} 
-                        placeholder="Email Address" 
-                        onChange={(e) => onFormUpdate('email', e.target.value)} />
-                    </div>
+            </form>
 
-                    <div>
-                      <input type="tel" 
-                        value={formDetails.phone} 
-                        placeholder="Phone No." 
-                        onChange={(e) => onFormUpdate('phone', e.target.value)}/>
-                    </div>
-
-                    <div>
-                      <textarea type="text" 
-                        value={formDetails.message} 
-                        placeholder="Message" 
-                        onChange={(e) => onFormUpdate('message', e.target.value)}>
-                      </textarea>
-                    </div>
-
-                    <button type="submit" className="rounded-3">
-                      <span>{buttonText}</span>
-                    </button>
-
-                    {
-                      status.message &&
-                      <div>
-                        <p className={status.success === false ? "text-red-300" : "text-green-400"}>
-                        {status.message}
-                        </p>
-                      </div>
-                    }
-
-                  </div>
-
-                </form>
-
-              </div>}
-          </TrackVisibility>
+          </div>
 
         </div>
 

@@ -18,7 +18,7 @@ function Footer() {
                 <div className="w-full flex justify-start">
                     <div className="w-full flex flex-row justify-between items-start ss:mb-8 ss:mt-12 sm:mt-4">
 
-                        <div className="xs:block hidden flex flex-col xs:max-w-[180px] sm:max-w-[300px] 
+                        <div className="xs:flex hidden flex-col xs:max-w-[180px] sm:max-w-[300px] 
                             md:max-w-[300px]">
                             <a href="/">
                                 <div className={`text-gray-400 font-bold md:text-[16px] sm:text-[25px] 

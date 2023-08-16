@@ -2,37 +2,22 @@ import { useState, useEffect } from 'react';
 import logo from "../assets/img/Shosan-Acodemia-Logo-small2.png";
 import menu from "../assets/img/menu.svg";
 import close from "../assets/img/close.svg";
+import { useContext } from 'react';
+import { AppContext } from './context/AppContext';
+
 
 
 function Navbar() {
-    const navLinks = [
-        {
-            id: "#home",
-            title: "Home",
-        },
-        {
-            id: "#aboutme",
-            title: "About Me",
-        },
-        {
-            id: "#skills",
-            title: "Skills",
-        },
-        {
-            id: "#projects",
-            title: "Projects",
-        },
-        {
-            id: "#connect",
-            title: "Let's Connect",
-        }
-    ];
-
-    const [active, setActive] = useState("Home");
+    const { active, setActive, navLinks } = useContext(AppContext);
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-
+    const PageScroll = (sectionRef) => {
+        sectionRef.current.scrollIntoView({ 
+            behavior: "smooth",
+            block: "start",
+        });
+    }
 
     useEffect(() => {
         const onScroll = () => {
@@ -44,7 +29,6 @@ function Navbar() {
         }
 
         window.addEventListener("scroll", onScroll);
-        
 
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
@@ -90,9 +74,13 @@ function Navbar() {
                                 ${scrolled
                                 ? "text-[13px] navText1 duration-1000"
                                 : "text-[15px] navText2 duration-1000"}`}
-                                onClick={() => setActive(nav.title)}
+                                onClick={() => {
+                                    setActive(nav.title);
+                                    PageScroll(nav.ref);
+                                    setTimeout(() => {setActive("")}, 5000);
+                                }}
                             >
-                                <a href={`${nav.id}`}>{ nav.title }</a>
+                                { nav.title }
                             </li>
                         ))}
                     </ul>

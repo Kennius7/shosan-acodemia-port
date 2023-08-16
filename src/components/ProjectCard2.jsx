@@ -2,7 +2,7 @@
 
 const ProjectCard2 = ({ ...project }) => {
   return (
-    <div className="w-[32%] h-[200px]">
+    <div className="w-[31%] h-[300px]">
       <div className="proj-imgbx w-full h-full">
         <img src={project.imgUrl} alt="project pics" className="w-full h-full object-cover" />
         <div className="proj-txtx">

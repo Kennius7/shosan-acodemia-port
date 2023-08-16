@@ -142,6 +142,10 @@
   text-shadow: 0 0 1px rgb(219, 189, 15);
 }
 
+.navText3{
+  text-shadow: 0 0 1px rgb(241, 61, 6);
+}
+
 
 
 
@@ -151,24 +155,14 @@
 
 .skill h2 {
   color: white;
-	font-size: 45px;
 	font-weight: 700;
 }
 .skill p {
     color: #B8B8B8;
-    font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
-    margin: 14px 0 75px 0;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
+
 .background-image-left {
   bottom: 0;
   width: 40%;
@@ -176,11 +170,7 @@
 
 
 
-.project {
-  padding: 80px 0;
-  position: relative;
-  background-color: black;
-}
+
 .project h2 {
   color: white;
 	font-size: 45px;
@@ -188,14 +178,11 @@
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
-  font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
+  /* margin: 14px auto 30px auto; */
 }
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
@@ -244,36 +231,23 @@
 
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
 }
-.contact img {
-  width: 92%;
-}
-.contact h2 {
-	font-size: 45px;
-	font-weight: 700;
-  margin-bottom: 30px;
-}
+
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 15px;
   color: #fff;
-  margin: 0 0 8px 0;
-  padding: 18px 26px;
   font-weight: 500;
-  font-size: 18px;
   letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
   background: rgba(255, 255, 255, 1);
   color: #121212;
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
-  font-size: 16px;
-  font-weight: 400;
   color: #fff;
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
@@ -287,7 +261,7 @@
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
+  border-radius: 8px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
@@ -308,6 +282,7 @@
   left: 0;
   z-index: 0;
   transition: 0.3s ease-in-out;
+  border-radius: 8px;
 }
 .contact form button:hover::before {
   width: 100%;

@@ -64,8 +64,8 @@ const AboutMe = () => {
       </div>
 
       <div className="flex justify-between items-center absolute z-2 top-[80%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[40%] h-[40%]"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[40%] h-[40%]"/>
       </div>
 
     </section>

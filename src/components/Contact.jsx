@@ -123,7 +123,8 @@ const Contact = () => {
                   </textarea>
                 </div>
 
-                <button type="submit" className="rounded-3">
+                <button type="submit" className="text-[18px] text-start rounded-[8px] w-[270px] h-[55px] 
+                  mt-[25px] pl-4">
                   <span>{buttonText}</span>
                 </button>
 

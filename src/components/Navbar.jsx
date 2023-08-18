@@ -35,22 +35,25 @@ function Navbar() {
 
 
     return (
-        <nav className={`w-full flex justify-around items-center`}>
+        <nav className={`w-full flex justify-around items-center sm:h-[100px] h-[80px]`}>
 
-            <div className="md:w-[300px] sm:w-[350px] xs:w-[280px] w-[170px] flex justify-start items-center">
-                <a href="/" className='flex justify-center items-center md:w-[80px] sm:w-[150px] xs:w-[80px] w-[80px]'>
+            <div className="md:w-[25%] sm:w-[50%] xs:w-[48%] w-[50%] flex justify-around items-center">
+
+                <a href="/" className="flex justify-center items-center md:w-[20%] sm:w-[20%] 
+                    xs:w-[22%] w-[20%]">
                     <img src={logo} alt="Maticdrive logo"
                         className={`${scrolled
-                            ? "w-[40px] h-[40px] xs:w-[50px] xs:h-[50px] sm:w-[80px] sm:h-[80px] md:w-[38px] md:h-[38px] duration-1000"
-                            : "w-[50px] h-[50px] xs:w-[55px] xs:h-[55px] sm:w-[90px] sm:h-[90px] md:w-[45px] md:h-[45px] duration-1000"} 
-                        m-2`}
+                            ? "w-[70%] h-[70%] xs:w-[40px] xs:h-[40px] sm:w-[40%] sm:h-[40%] md:w-[35px] md:h-[35px] duration-1000"
+                            : "w-[80%] h-[80%] xs:w-[45px] xs:h-[45px] sm:w-[45%] sm:h-[45%] md:w-[40px] md:h-[40px] duration-1000"} 
+                            m-2`}
                     />
                 </a>
-                <a href="/">
+
+                <a href="/" className="md:w-[80%] sm:w-[80%] xs:w-[78%] w-[80%]">
                     <div className="w-full flex flex-col justify-center items-center">
                         <div className={`${scrolled
-                            ? "md:text-[19px] sm:text-[35px] xs:text-[20px] text-[17px] duration-1000"
-                            : "md:text-[22px] sm:text-[40px] xs:text-[22px] text-[20px] duration-1000"} 
+                            ? "md:text-[19px] sm:text-[25px] xs:text-[21px] text-[25px] duration-1000"
+                            : "md:text-[22px] sm:text-[30px] xs:text-[22px] text-[30px] duration-1000"} 
                             font-semibold text-white w-full flex justify-start items-center`}>
                             Shosan&apos;s
                             <span className="text-grad">
@@ -59,6 +62,7 @@ function Navbar() {
                         </div>
                     </div>
                 </a>
+
             </div>
 
             <div className="w-full md:w-full sm:w-[500px] flex flex-1 justify-end items-center">
@@ -93,8 +97,8 @@ function Navbar() {
                             src={toggle ? close : menu}
                             alt="menu"
                             className={`${scrolled 
-                            ? "sm:w-[36px] sm:h-[36px] xs:w-[20px] xs:h-[20px] w-[18px] h-[18px] duration-1000" 
-                            : "sm:w-[40px] sm:h-[40px] xs:w-[22px] xs:h-[22px] w-[22px] h-[22px] duration-1000"}
+                            ? "sm:w-[30px] sm:h-[30px] xs:w-[22px] xs:h-[22px] w-[25px] h-[25px] duration-1000" 
+                            : "sm:w-[35px] sm:h-[35px] xs:w-[25px] xs:h-[25px] w-[30px] h-[30px] duration-1000"}
                             mr-2 xs:mr-2 sm:mr-4 object-contain`}
                             onClick={() => setToggle(!toggle)}
                         />
@@ -115,10 +119,12 @@ function Navbar() {
                                     ${active === nav.title ? "text-white" : "text-dimWhite"}`}
                                     onClick={() => {
                                         setActive(nav.title);
+                                        PageScroll(nav.ref);
+                                        // setTimeout(() => {setActive("")}, 5000);
                                         setToggle(!toggle);
                                     }}
                                 >
-                                    <a href={`${nav.id}`}>{nav.title}</a>
+                                    {nav.title}
                                 </li>
                             ))}
                         </ul>

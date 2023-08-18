@@ -49,28 +49,33 @@ function Footer() {
 
                         <div className={`flex flex-col justify-start max-w-[180px] xs:max-w-[180px] 
                             sm:max-w-[300px] md:max-w-[400px]`}>
+
                             <h2 className={`text-gray-400 font-bold sm:mb-6 xs:mb-4 mb-3 sm:text-[25px] 
-                            xs:text-[17px] md:text-[16px] text-[16px]`}>Have Questions?</h2>
+                            xs:text-[17px] md:text-[16px] text-[16px]`}>
+                                Have Questions?
+                            </h2>
 
                             <ul className="w-full text-gray-400 flex flex-1 flex-col justify-start">
                                 <li className="sm:mb-2 ss:mb-4">
-                                    <a href="#" className="sm:mb-0 mb-2 flex flex-row justify-start items-center">
+                                    <a href="https://wa.me/+2348055549979" className="sm:mb-0 mb-2 flex flex-row justify-start items-center">
                                         <img src={phoneIcon} alt="phone" className="w-[15px] h-[15px] 
                                         ss:w-[20px] ss:h-[20px]"/>
                                         <span className="md:text-[15px] sm:text-[20px] xs:text-[13px] 
-                                        text-[14px]">+2348055549979</span>
+                                        text-[14px] pl-1">+2348055549979</span>
                                     </a>
                                 </li>
                                 <li className="sm:mb-2 ss:mb-2">
-                                    <a href="#" className="flex flex-row justify-start items-center">
+                                    <a href="mailto:shinjinchu@gmail.com" 
+                                        className="flex flex-row justify-start items-center">
                                         <img src={emailIcon} alt="email" className="w-[15px] 
                                         h-[15px] ss:w-[20px] ss:h-[20px]"/>
                                         <span className={`md:text-[15px] sm:text-[20px] xs:text-[13px] 
-                                        text-[15px] tracking-[-1px] xs:tracking-[0px]`}>shinjinchu@gmail.com</span>
+                                        text-[15px] tracking-[-1px] xs:tracking-[0px] pl-1`}>shinjinchu@gmail.com</span>
                                     </a>
                                 </li>
 
-                                <ul className="xs:flex hidden flex-row justify-around items-center mt-4 xs:mt-2 sm:mt-1">
+                                <ul className="xs:flex hidden flex-row justify-around items-center mt-4 
+                                    xs:mt-2 sm:mt-1">
                                     <li>
                                         <a href="https://www.facebook.com" 
                                             target="_blank" rel="noreferrer">

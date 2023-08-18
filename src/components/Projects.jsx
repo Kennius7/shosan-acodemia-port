@@ -130,7 +130,8 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={`${active === projectButton3 ? "block" : "hidden"}`}>
+            <div className={`${active === projectButton3 ? "block" : "hidden"} 
+              text-white flex justify-center items-center`}>
               <p>Project listings coming soon.</p>
             </div>
 

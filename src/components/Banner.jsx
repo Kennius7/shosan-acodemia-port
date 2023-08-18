@@ -52,21 +52,24 @@ const Banner = () => {
 
   return (
     <section id="home" ref={homeRef}
-      className={`flex flex-row justify-center items-start relative w-full h-[700px]`}>
+      className={`flex flex-col justify-center items-center relative w-full h-[700px] bg-red-700`}>
 
       <div className="flex justify-around items-center text-white absolute z-[1] top-[15%] w-full">
 
-        <div className="w-[47%] md:ml-4">
+        <div className="md:w-[46%] sm:w-[46%] md:ml-4">
         
           <div className="w-full">
 
-            <div className="flex justify-start items-center tagline rounded-[5px] w-[40%] h-[55px] ">
-              <span className="md:text-[20px] text-center ml-5">
+            <div className="flex justify-start items-center tagline rounded-[5px] md:w-[40%] sm:w-[50%] 
+              xs:w-[40%] w-[30%] h-[55px] ">
+              <span className="md:text-[20px] sm:text-[22px] xs:text-[20px] text-[16px] text-center ml-5">
               Hi, I&apos;m Kenny
               </span>
             </div>
 
-            <h1 className="md:text-[50px] font-semibold md:mb-4">{`I'm a`} 
+            <h1 className="font-semibold md:tracking-normal sm:tracking-tighter md:text-[50px] 
+              sm:text-[45px] xs:text-[40px] text-[35px] md:mb-4 sm:mb-6 md:w-full w-[150%]">
+              {`I'm a`}
               <span className="txt-rotate">
                 <span className="wrap">
                   {text}
@@ -74,7 +77,8 @@ const Banner = () => {
               </span>
             </h1>
 
-            <p className="w-full md:text-[17px] md:mb-6">
+            <p className="w-full md:text-[17px] sm:text-[18px] xs:text-[17px] text-[17px] md:mb-6 
+              sm:mb-8 xs:mb-6 mb-5">
               I love the idea of using software to design solutions and troubleshooting 
               complex problems. I believe in the power of programming to transform and build unique 
               digital experiences.<br /> <br />
@@ -82,36 +86,27 @@ const Banner = () => {
               professionals who are striving to achieve a common goal/result.
             </p>
 
-            <WhatsappButton 
-              mdWidthPercent={60}
-              mdHeightPixel={50}
-              smWidthPercent={50}
-              smHeightPixel={50}
-              xsWidthPercent={40}
-              xsHeightPixel={50}
-              WidthPercent={30}
-              HeightPixel={40}
-              buttonText="Let's Connect on"
-              linkString="#connect"
-            />
+            <WhatsappButton buttonText="Let's Connect on" />
 
           </div>
 
         </div>
 
-        <div className="flex justify-center items-center w-[40%] md:-mt-12 animate-pulse">
+        <div className="flex justify-center items-center md:w-[44%] sm:w-[46%] md:-mt-12 mt-0">
           <div className="w-full">
             <img src={headerImg} alt="Header Img" 
-              className="w-[98%] h-[98%]" />
+              className="md:w-[98%] md:h-[98%] sm:w-[100%] sm:h-[100%]" />
           </div>
         </div>
 
       </div>
 
-      <div className="flex justify-between items-center absolute z-2 top-[70%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[550px] h-[550px]"/>
+
+      <div className="flex justify-between items-center absolute z-2 md:top-[50%] sm:top-[30%]">
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
       </div>
+
 
     </section>
   );

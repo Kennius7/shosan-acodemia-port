@@ -35,12 +35,12 @@ function Navbar() {
 
 
     return (
-        <nav className={`w-full flex justify-around items-center sm:h-[100px] h-[80px]`}>
+        <nav className={`w-full flex justify-around items-center md:h-[70px] sm:h-[80px] xs:h-[70px] h-[60px]`}>
 
             <div className="md:w-[25%] sm:w-[50%] xs:w-[48%] w-[50%] flex justify-around items-center">
 
                 <a href="/" className="flex justify-center items-center md:w-[20%] sm:w-[20%] 
-                    xs:w-[22%] w-[20%]">
+                    xs:w-[22%] w-[23%]">
                     <img src={logo} alt="Maticdrive logo"
                         className={`${scrolled
                             ? "w-[70%] h-[70%] xs:w-[40px] xs:h-[40px] sm:w-[40%] sm:h-[40%] md:w-[35px] md:h-[35px] duration-1000"
@@ -49,11 +49,11 @@ function Navbar() {
                     />
                 </a>
 
-                <a href="/" className="md:w-[80%] sm:w-[80%] xs:w-[78%] w-[80%]">
+                <a href="/" className="md:w-[80%] sm:w-[80%] xs:w-[78%] w-[70%]">
                     <div className="w-full flex flex-col justify-center items-center">
                         <div className={`${scrolled
-                            ? "md:text-[19px] sm:text-[25px] xs:text-[21px] text-[25px] duration-1000"
-                            : "md:text-[22px] sm:text-[30px] xs:text-[22px] text-[30px] duration-1000"} 
+                            ? "md:text-[19px] sm:text-[25px] xs:text-[21px] text-[18px] duration-1000"
+                            : "md:text-[22px] sm:text-[30px] xs:text-[22px] text-[20px] duration-1000"} 
                             font-semibold text-white w-full flex justify-start items-center`}>
                             Shosan&apos;s
                             <span className="text-grad">
@@ -97,8 +97,8 @@ function Navbar() {
                             src={toggle ? close : menu}
                             alt="menu"
                             className={`${scrolled 
-                            ? "sm:w-[30px] sm:h-[30px] xs:w-[22px] xs:h-[22px] w-[25px] h-[25px] duration-1000" 
-                            : "sm:w-[35px] sm:h-[35px] xs:w-[25px] xs:h-[25px] w-[30px] h-[30px] duration-1000"}
+                            ? "sm:w-[30px] sm:h-[30px] xs:w-[22px] xs:h-[22px] w-[20px] h-[20px] duration-1000" 
+                            : "sm:w-[35px] sm:h-[35px] xs:w-[25px] xs:h-[25px] w-[22px] h-[22px] duration-1000"}
                             mr-2 xs:mr-2 sm:mr-4 object-contain`}
                             onClick={() => setToggle(!toggle)}
                         />

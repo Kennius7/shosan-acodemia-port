@@ -52,23 +52,26 @@ const Banner = () => {
 
   return (
     <section id="home" ref={homeRef}
-      className={`flex flex-col justify-center items-center relative w-full h-[700px] bg-red-700`}>
+      className={`flex flex-col justify-center items-center relative w-full sm:h-[700px] xs:h-[1000px] 
+        h-[900px]`}>
 
-      <div className="flex justify-around items-center text-white absolute z-[1] top-[15%] w-full">
+      <div className="flex sm:flex-row flex-col sm:justify-around justify-center items-center 
+        text-white absolute z-[1] xs:top-[15%] top-[10%] w-full">
 
-        <div className="md:w-[46%] sm:w-[46%] md:ml-4">
+        <div className="md:w-[46%] sm:w-[46%] w-full md:ml-4 ml-0">
         
-          <div className="w-full">
+          <div className="flex flex-col justify-center items-start sm:w-full w-[90%] xs:ml-4 ml-2">
 
-            <div className="flex justify-start items-center tagline rounded-[5px] md:w-[40%] sm:w-[50%] 
-              xs:w-[40%] w-[30%] h-[55px] ">
-              <span className="md:text-[20px] sm:text-[22px] xs:text-[20px] text-[16px] text-center ml-5">
-              Hi, I&apos;m Kenny
+            <div className="flex justify-start items-center tagline rounded-[5px] md:w-[40%] sm:w-[55%] 
+              xs:w-[40%] w-[45%] sm:h-[55px] xs:h-[50px] h-[45px]">
+              <span className="text-center md:text-[20px] sm:text-[22px] xs:text-[18px] text-[16px] 
+                md:ml-5 sm:ml-3 ml-2">
+                Hi, I&apos;m Kenny
               </span>
             </div>
 
-            <h1 className="font-semibold md:tracking-normal sm:tracking-tighter md:text-[50px] 
-              sm:text-[45px] xs:text-[40px] text-[35px] md:mb-4 sm:mb-6 md:w-full w-[150%]">
+            <h1 className="font-semibold md:tracking-normal sm:tracking-tighter tracking-normal md:text-[50px] 
+              sm:text-[45px] xs:text-[43px] text-[30px] md:mb-4 sm:mb-6 xs:mb-3 mb-2 md:w-full sm:w-[150%] w-full">
               {`I'm a`}
               <span className="txt-rotate">
                 <span className="wrap">
@@ -77,34 +80,45 @@ const Banner = () => {
               </span>
             </h1>
 
-            <p className="w-full md:text-[17px] sm:text-[18px] xs:text-[17px] text-[17px] md:mb-6 
-              sm:mb-8 xs:mb-6 mb-5">
+            <p className="w-full md:text-[17px] sm:text-[18px] xs:text-[17px] text-[16px] md:mb-10 
+              sm:mb-8 xs:mb-8 mb-5">
               I love the idea of using software to design solutions and troubleshooting 
               complex problems. I believe in the power of programming to transform and build unique 
-              digital experiences.<br /> <br />
+              digital experiences.<br /> <br className="xs:block hidden" />
               As a team player, and one who loves building new relationships, I enjoy working with other
               professionals who are striving to achieve a common goal/result.
             </p>
 
-            <WhatsappButton buttonText="Let's Connect on" />
+            <WhatsappButton buttonText="Let's connect on" />
 
           </div>
 
         </div>
 
-        <div className="flex justify-center items-center md:w-[44%] sm:w-[46%] md:-mt-12 mt-0">
-          <div className="w-full">
+        <div className="flex justify-center items-center md:w-[44%] sm:w-[46%] md:-mt-12 sm:mt-0 xs:mt-4">
+          <div className="flex justify-center items-center w-full">
             <img src={headerImg} alt="Header Img" 
-              className="md:w-[98%] md:h-[98%] sm:w-[100%] sm:h-[100%]" />
+              className="md:w-[98%] md:h-[98%] sm:w-[100%] sm:h-[100%] xs:w-[80%] xs:h-[80%] w-[82%] h-[82%]" />
           </div>
         </div>
 
       </div>
 
 
-      <div className="flex justify-between items-center absolute z-2 md:top-[50%] sm:top-[30%]">
+      <div className="flex justify-between items-center absolute z-2 md:top-[40%] sm:top-[30%] 
+        xs:top-[10%] top-[7%]">
         <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
         <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
+      </div>
+
+      <div className="sm:hidden flex justify-between items-center absolute z-2 xs:top-[43%] top-[30%]">
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[47%] h-[47%] -mt-4"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[47%] h-[47%]"/>
+      </div>
+
+      <div className="xs:hidden flex justify-between items-center absolute z-2 top-[55%]">
+        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[47%] h-[47%] -mt-4"/>
+        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[47%] h-[47%]"/>
       </div>
 
 

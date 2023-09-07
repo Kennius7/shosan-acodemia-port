@@ -90,7 +90,7 @@ const Skills = () => {
     autoplay: true,
     rewind: true,
     rewindSpeed: "1000",
-    isNavigation: true,
+    isNavigation: false,
     arrows: true,
     focus: 0,
     start: 0,
@@ -108,10 +108,10 @@ const Skills = () => {
     mediaQuery: "min",
     breakpoints: {
       1000: { perPage: 3},
-      700: { perPage: 2},
-      400: { perPage: 1},
+      500: { perPage: 2},
+      100: { perPage: 1},
     },
-};
+  };
 
 
   return (
@@ -136,21 +136,21 @@ const Skills = () => {
         </div>
 
         <div className="sm:rounded-[64px] xs:rounded-[50px] rounded-[30px] bg-black/95 sm:w-[80%] w-[95%] 
-          md:h-[500px] sm:h-[400px] xs:h-[280px] h-[260px] md:pt-[7%] sm:pt-[5%] xs:pt-[6%] pt-[2%]">
+          md:h-[500px] sm:h-[400px] xs:h-[280px] h-[290px] md:pt-[7%] sm:pt-[5%] xs:pt-[6%] pt-[8%]">
 
           <Splide options={splideOptions}>
               {featureSlide.map((card) => (
                 <SplideSlide key={card.id}>
                   <div className="w-full flex flex-col justify-center items-center">
 
-                    <div className="xs:w-[90%] w-[94%] flex flex-col justify-center items-center relative">
+                    <div className="xs:w-[90%] w-[96%] flex flex-col justify-center items-center relative">
 
                       <img src={card.img} alt={card.name} 
                         className="bg-center bg-cover sm:w-[86%] sm:h-[86%] xs:w-[80%] xs:h-[80%] 
-                          w-[90%] h-[90%] "/>
+                          w-[62%] h-[62%] "/>
 
                       <div className="text-white absolute z-[2] md:top-[45%] md:right-[41%] 
-                        sm:top-[42%] sm:right-[40%] xs:top-[43%] xs:right-[41%] top-[45%] right-[41%]
+                        sm:top-[42%] sm:right-[40%] xs:top-[43%] xs:right-[41%] top-[45%] right-[44%]
                         font-semibold italic md:text-[25px] sm:text-[22px] text-[16px]">
                         {card.percent}
                       </div>
@@ -159,11 +159,11 @@ const Skills = () => {
 
                     <div className="flex flex-col justify-center items-center">
                       <div className="font-poppins font-semibold text-center md:text-[25px] sm:text-[22px] 
-                        xs:text-[18px] text-[16px] text-grad">
+                        xs:text-[18px] text-[19px] text-grad">
                         {card.name}
                       </div>
                       <div className="font-poppins italic text-center md:text-[18px] sm:text-[16px] xs:text-[14px] 
-                        text-[13px] text-dimWhite">
+                        text-[15px] text-dimWhite">
                         {card.title}
                       </div>
                     </div>

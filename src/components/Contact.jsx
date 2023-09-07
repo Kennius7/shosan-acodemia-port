@@ -69,7 +69,7 @@ const Contact = () => {
 
     else {
       setButtonText("Sending...");
-      emailjs.sendForm('service_n10fnh6', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
+      emailjs.sendForm('service_n10fnh6', 'template_zx24zti', form.current, 'h-F7iEPReaPmY032e')
       .then((result) => {
         console.log(result.text, result.status);
         setTimeout(() => {

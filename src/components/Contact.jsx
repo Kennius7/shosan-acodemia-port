@@ -12,6 +12,7 @@ const Contact = () => {
     lastName: '',
     email: '',
     phone: '',
+    subject: '',
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
@@ -20,7 +21,7 @@ const Contact = () => {
   const [statusText, setStatusText] = useState("I'd like to hear from you...")
   const form = useRef();
   const { connectRef } = useContext(AppContext);
-  const { firstName, lastName, email, phone, message } = formDetails;
+  const { firstName, lastName, email, phone, subject, message } = formDetails;
 
   const upperCaseRegex = /[A-Z]/;
   const lowerCaseRegex = /[a-z]/;
@@ -44,7 +45,7 @@ const Contact = () => {
     console.log(formDetails);
     console.log(phone);
 
-    if (!firstName || !lastName || !email || !phone || !message) {
+    if (!firstName || !lastName || !email || !phone || !subject || !message) {
       setButtonText("Send?");
       setStatusText("Please fill out all necessary fields");
       setTimeout(() => {
@@ -125,7 +126,7 @@ const Contact = () => {
 
                 <div>
                   <input type="text" 
-                    value={formDetails.firstName} 
+                    value={firstName} 
                     placeholder="First Name" 
                     onChange={(e) => onFormUpdate('firstName', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -134,7 +135,7 @@ const Contact = () => {
 
                 <div>
                   <input type="text" 
-                    value={formDetails.lastName} 
+                    value={lastName} 
                     placeholder="Last Name" 
                     onChange={(e) => onFormUpdate('lastName', e.target.value)} 
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -143,7 +144,7 @@ const Contact = () => {
 
                 <div>
                   <input type="email" 
-                    value={formDetails.email} 
+                    value={email} 
                     placeholder="Email Address" 
                     onChange={(e) => onFormUpdate('email', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -152,7 +153,7 @@ const Contact = () => {
 
                 <div>
                   <input type="text" 
-                    value={formDetails.phone} 
+                    value={phone} 
                     placeholder="Phone No." 
                     onChange={(e) => onFormUpdate('phone', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -160,8 +161,17 @@ const Contact = () => {
                 </div>
 
                 <div>
+                  <input type="text" 
+                    value={subject} 
+                    placeholder="Email Subject" 
+                    onChange={(e) => onFormUpdate('subject', e.target.value)}
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
+                      xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>
+                </div>
+
+                <div>
                   <textarea type="text" 
-                    value={formDetails.message} 
+                    value={message} 
                     placeholder="Message" 
                     onChange={(e) => onFormUpdate('message', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xxs:h-[100px] h-[80px] 

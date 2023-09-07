@@ -68,7 +68,7 @@ const Contact = () => {
 
     else {
       setButtonText("Sending...");
-      emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
+      emailjs.sendForm('service_n10fnh6', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
       .then((result) => {
         console.log(result.text, result.status);
         setTimeout(() => {
@@ -183,7 +183,7 @@ const Contact = () => {
                     status.message &&
                     <div>
                       <p className={`${status.success === false ? "text-black" : "text-green-400"} 
-                          xs:text-[18px] xxs:text-[16px] text-[13px] italic xs:w-full w-[60%] xs:leading-normal 
+                          xs:text-[18px] xxs:text-[16px] text-[13px] italic xs:w-full xxs:w-[80%] w-[60%] xs:leading-normal 
                           leading-[20px]`}>
                           {status.message}
                       </p>

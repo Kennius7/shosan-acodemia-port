@@ -15,10 +15,17 @@ const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send Message');
+  const [buttonText, setButtonText] = useState("Send Message");
   const [status, setStatus] = useState({});
+  const [statusText, setStatusText] = useState("I'd like to hear from you...")
   const form = useRef();
   const { connectRef } = useContext(AppContext);
+  const { firstName, lastName, email, phone, message } = formDetails;
+
+  const upperCaseRegex = /[A-Z]/;
+  const lowerCaseRegex = /[a-z]/;
+  const specialCharRegex = /[!@#$%^&*()_:";'<>,./?=-`~]/
+  // const numberRegex = /[0-9]/;
 
   const onFormUpdate = (category, value) => {
       setFormDetails({
@@ -27,12 +34,41 @@ const Contact = () => {
       })
   }
 
+  const validatePassword = (regex, password) => {
+    const hasRegex = regex.test(password);
+    return hasRegex;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setButtonText("Sending...")
+    console.log(formDetails);
+    console.log(phone);
 
-    emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
+    if (!firstName || !lastName || !email || !phone || !message) {
+      setButtonText("Send?");
+      setStatusText("Please fill out all necessary fields");
+      setTimeout(() => {
+        setButtonText("Send Message")
+        setStatusText("I'd like to hear from you...");
+      }, 4000);
+    }
+
+    if (
+        validatePassword(upperCaseRegex, phone) || 
+        validatePassword(lowerCaseRegex, phone) || 
+        validatePassword(specialCharRegex, phone)
+        ) {
+            setButtonText("Send?");
+            setStatusText("All phone number characters should be numbers");
+            setTimeout(() => {
+              setButtonText("Send Message")
+              setStatusText("I'd like to hear from you...");
+            }, 5000);
+    }
+
+    else {
+      setButtonText("Sending...");
+      emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
       .then((result) => {
         console.log(result.text, result.status);
         setTimeout(() => {
@@ -51,14 +87,15 @@ const Contact = () => {
           setButtonText("Message Not Sent");
         }, 3000);
         setTimeout(() => {
-          e.target.reset();
+          // e.target.reset();
           setButtonText("Please Try Again");
         }, 7000);
         setTimeout(() => {
           setButtonText("Send Message");
           setStatus({});
-        }, 10000);
+        }, 11000);
       });
+    }
   };
 
 
@@ -91,7 +128,7 @@ const Contact = () => {
                     value={formDetails.firstName} 
                     placeholder="First Name" 
                     onChange={(e) => onFormUpdate('firstName', e.target.value)}
-                    className="text-[18px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
                       xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>
                 </div>
 
@@ -100,7 +137,7 @@ const Contact = () => {
                     value={formDetails.lastName} 
                     placeholder="Last Name" 
                     onChange={(e) => onFormUpdate('lastName', e.target.value)} 
-                    className="text-[18px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
                       xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>
                 </div>
 
@@ -109,16 +146,16 @@ const Contact = () => {
                     value={formDetails.email} 
                     placeholder="Email Address" 
                     onChange={(e) => onFormUpdate('email', e.target.value)}
-                    className="text-[18px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
                       xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>
                 </div>
 
                 <div>
-                  <input type="tel" 
+                  <input type="text" 
                     value={formDetails.phone} 
                     placeholder="Phone No." 
                     onChange={(e) => onFormUpdate('phone', e.target.value)}
-                    className="text-[18px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
                       xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>
                 </div>
 
@@ -127,30 +164,33 @@ const Contact = () => {
                     value={formDetails.message} 
                     placeholder="Message" 
                     onChange={(e) => onFormUpdate('message', e.target.value)}
-                    className="text-[18px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
-                      xxs:placeholder:text-[15px] placeholder:text-[14px]  placeholder:font-semibold">
+                    className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xxs:h-[100px] h-[80px] 
+                      xs:placeholder:text-[16px] xxs:placeholder:text-[15px] placeholder:text-[14px] 
+                      placeholder:font-semibold">
                   </textarea>
                 </div>
 
                 <button 
                   type="submit" 
-                  className="font-poppins text-start rounded-[8px] sm:text-[18px] xs:text-[16px] 
-                  xxs:text-[15px] text-[14px] md:w-[45%] sm:w-[60%] xs:w-[45%] w-[60%] xs:h-[55px] xxs:h-[50px] 
+                  className="font-poppins text-start xs:rounded-[8px] rounded-[6px] sm:text-[18px] xs:text-[16px] 
+                  xxs:text-[15px] text-[13px] md:w-[45%] sm:w-[60%] xs:w-[45%] w-[60%] xs:h-[55px] xxs:h-[50px] 
                   h-[45px] mt-[25px] xs:pl-4 xxs:pl-3 pl-2">
                   <span className="duration-1000">{buttonText}</span>
                 </button>
 
-                <div className="flex flex-col justify-center items-start navText3 mt-3 xxs:pl-2 pl-1">
+                <div className="flex flex-col justify-center items-start navText3 xs:mt-3 mt-1 xxs:pl-2 pl-1">
                   {
                     status.message &&
                     <div>
                       <p className={`${status.success === false ? "text-black" : "text-green-400"} 
-                          xxs:text-[18px] text-[16px] italic`}>{status.message}
+                          xs:text-[18px] xxs:text-[16px] text-[13px] italic xs:w-full w-[60%] xs:leading-normal 
+                          leading-[20px]`}>
+                          {status.message}
                       </p>
                     </div>
                     || 
-                    <div className="text-white xxs:text-[18px] text-[16px] italic">
-                      I&apos;d like to hear from you...
+                    <div className="text-white xs:text-[18px] xxs:text-[16px] text-[14px] italic">
+                      { statusText }
                     </div>
                   }
                 </div>

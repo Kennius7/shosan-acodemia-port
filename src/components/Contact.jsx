@@ -127,6 +127,7 @@ const Contact = () => {
                 <div>
                   <input type="text" 
                     value={firstName} 
+                    name="firstName"
                     placeholder="First Name" 
                     onChange={(e) => onFormUpdate('firstName', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -136,6 +137,7 @@ const Contact = () => {
                 <div>
                   <input type="text" 
                     value={lastName} 
+                    name="lastName"
                     placeholder="Last Name" 
                     onChange={(e) => onFormUpdate('lastName', e.target.value)} 
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -145,6 +147,7 @@ const Contact = () => {
                 <div>
                   <input type="email" 
                     value={email} 
+                    name="email"
                     placeholder="Email Address" 
                     onChange={(e) => onFormUpdate('email', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -154,6 +157,7 @@ const Contact = () => {
                 <div>
                   <input type="text" 
                     value={phone} 
+                    name="phone"
                     placeholder="Phone No." 
                     onChange={(e) => onFormUpdate('phone', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -163,6 +167,7 @@ const Contact = () => {
                 <div>
                   <input type="text" 
                     value={subject} 
+                    name="subject"
                     placeholder="Email Subject" 
                     onChange={(e) => onFormUpdate('subject', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
@@ -172,6 +177,7 @@ const Contact = () => {
                 <div>
                   <textarea type="text" 
                     value={message} 
+                    name="message"
                     placeholder="Message" 
                     onChange={(e) => onFormUpdate('message', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xxs:h-[100px] h-[80px] 

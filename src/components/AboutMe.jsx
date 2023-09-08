@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import ConnectButton from "./ConnectButton";
 import { AppContext } from "./context/AppContext";
-import colorSharpPics1 from "../assets/img/color-sharp.png";
-import colorSharpPics2 from "../assets/img/color-sharp2.png";
 
 
 
@@ -63,34 +61,6 @@ const AboutMe = () => {
 
           </div>
 
-      </div>
-
-      <div className="flex justify-between items-center absolute z-2 md:top-[42%] sm:-top-[10%] xs:-top-[37%] 
-        -top-[30%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="md:hidden flex justify-between items-center absolute z-2 sm:top-[2%] xs:top-[40%] 
-        -top-[1%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="md:hidden flex justify-between items-center absolute z-2 sm:top-[55%] xs:-top-[1%] 
-        top-[25%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="sm:hidden flex justify-between items-center absolute z-2 xs:top-[77%] top-[50%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="xs:hidden flex justify-between items-center absolute z-2 top-[84%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
       </div>
 
     </section>

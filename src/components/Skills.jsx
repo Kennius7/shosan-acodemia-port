@@ -6,8 +6,6 @@ import features05 from "../assets/img/Meter-60.png";
 import features06 from "../assets/img/Meter-97.png";
 import features07 from "../assets/img/Meter-90.png";
 import features08 from "../assets/img/Meter-90.png";
-import colorSharpPics1 from "../assets/img/color-sharp.png";
-import colorSharpPics2 from "../assets/img/color-sharp2.png";
 import { useContext } from "react";
 import { AppContext } from "./context/AppContext";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -47,34 +45,34 @@ const Skills = () => {
     {
       id: 3,
       name: "Node.js",
-      title: "Back End Development",
+      title: "Server Side Development",
       img: features04,
       percent: "60%",
     },
     {
       id: 4,
       name: "Python",
-      title: "Software Programming",
+      title: "Software Development",
       img: features05,
       percent: "60%",
     },
     {
       id: 5,
-      name: "Adobe Premiere Pro",
+      name: "Premiere Pro",
       title: "Video Content Creation",
       img: features06,
       percent: "97%",
     },
     {
       id: 6,
-      name: "Adobe Photoshop",
-      title: "Graphics Design",
+      name: "Photoshop",
+      title: "Photo Editing Graphics Design",
       img: features07,
       percent: "90%",
     },
     {
       id: 7,
-      name: "Adobe After Effects",
+      name: "After Effects",
       title: "Video Effects Creation",
       img: features08,
       percent: "90%",
@@ -83,7 +81,7 @@ const Skills = () => {
 
   const splideOptions = {
     // width: "90%",
-    perPage: 3,
+    perPage: 4,
     perMove: 1,
     type: 'loop',
     keyboard: 'global',
@@ -94,7 +92,7 @@ const Skills = () => {
     arrows: true,
     focus: 0,
     start: 0,
-    interval: 4000,
+    interval: 3000,
     easing: "cubic-bezier()",
     gap: '0.5rem',
     pagination: false,
@@ -107,8 +105,9 @@ const Skills = () => {
     padding: '1rem',
     mediaQuery: "min",
     breakpoints: {
-      1000: { perPage: 3},
-      500: { perPage: 2},
+      1000: { perPage: 4},
+      580: { perPage: 3},
+      300: { perPage: 2},
       100: { perPage: 1},
     },
   };
@@ -116,7 +115,7 @@ const Skills = () => {
 
   return (
     <section ref={skillRef}
-      className="skill w-full h-[800px] relative flex flex-col justify-center items-center">
+      className="skill w-full md:h-[800px] sm:h-[700px] xs:h-[400px] xxs:h-[380px] h-[800px] relative flex flex-col justify-center items-center">
 
       <div className="flex flex-col justify-center items-center w-full absolute z-[1] sm:top-[10%] 
         xs:-top-[4%] -top-[1%]">
@@ -147,23 +146,23 @@ const Skills = () => {
 
                       <img src={card.img} alt={card.name} 
                         className="bg-center bg-cover sm:w-[86%] sm:h-[86%] xs:w-[80%] xs:h-[80%] 
-                          w-[62%] h-[62%] "/>
+                          w-[95%] h-[95%]"/>
 
                       <div className="text-white absolute z-[2] md:top-[45%] md:right-[41%] 
-                        sm:top-[42%] sm:right-[40%] xs:top-[43%] xs:right-[41%] top-[45%] right-[44%]
-                        font-semibold italic md:text-[25px] sm:text-[22px] text-[16px]">
+                        sm:top-[42%] sm:right-[40%] xs:top-[43%] xs:right-[41%] top-[45%] right-[40%]
+                        font-semibold italic md:text-[25px] sm:text-[22px] text-[15px]">
                         {card.percent}
                       </div>
 
                     </div>
 
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col justify-center items-center xs:mt-0 mt-[20px]">
                       <div className="font-poppins font-semibold text-center md:text-[25px] sm:text-[22px] 
-                        xs:text-[18px] text-[19px] text-grad">
+                        xs:text-[18px] text-[16px] text-grad">
                         {card.name}
                       </div>
                       <div className="font-poppins italic text-center md:text-[18px] sm:text-[16px] xs:text-[14px] 
-                        text-[15px] text-dimWhite">
+                        text-[13px] text-dimWhite sm:w-full w-[70%]">
                         {card.title}
                       </div>
                     </div>
@@ -175,16 +174,6 @@ const Skills = () => {
 
         </div>
 
-      </div>
-
-      <div className="flex justify-between items-center absolute z-2 top-[8%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="flex justify-between items-center absolute z-2 top-[8%] w-full">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
       </div>
       
     </section>

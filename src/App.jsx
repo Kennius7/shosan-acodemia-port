@@ -72,7 +72,7 @@ function App() {
 
       <BrowserRouter>
 
-        <div className={`flex flex-col main-bg relative`}>
+        <div className={`flex flex-col main-bg-2 relative`}>
 
           <div className={`w-full ${scrolled 
           ? "bg-primary fixed z-[3] duration-1000" 

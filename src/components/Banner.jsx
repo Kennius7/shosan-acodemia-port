@@ -1,7 +1,5 @@
 import { useState, useEffect, useContext } from "react";
 import headerImg from "../assets/img/shosan-pics-small.png";
-import colorSharpPics1 from "../assets/img/color-sharp.png";
-import colorSharpPics2 from "../assets/img/color-sharp2.png";
 import WhatsappButton from "./WhatsappButton";
 import { AppContext } from "./context/AppContext";
 
@@ -103,24 +101,6 @@ const Banner = () => {
         </div>
 
       </div>
-
-
-      <div className="flex justify-between items-center absolute z-2 md:top-[40%] sm:top-[30%] 
-        xs:top-[10%] top-[7%]">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[48%] h-[48%]"/>
-      </div>
-
-      <div className="sm:hidden flex justify-between items-center absolute z-2 xs:top-[43%] top-[30%]">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[47%] h-[47%] -mt-4"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[47%] h-[47%]"/>
-      </div>
-
-      <div className="xs:hidden flex justify-between items-center absolute z-2 top-[55%]">
-        <img src={colorSharpPics1} alt="colorsharp pics" className="w-[47%] h-[47%] -mt-4"/>
-        <img src={colorSharpPics2} alt="colorsharp pics" className="w-[47%] h-[47%]"/>
-      </div>
-
 
     </section>
   );

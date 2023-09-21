@@ -1,11 +1,4 @@
-import features01 from "../assets/img/Meter-90.png";
-import features02 from "../assets/img/Meter-60.png";
-import features03 from "../assets/img/Meter-90.png";
-import features04 from "../assets/img/Meter-60.png";
-import features05 from "../assets/img/Meter-60.png";
-import features06 from "../assets/img/Meter-97.png";
-import features07 from "../assets/img/Meter-90.png";
-import features08 from "../assets/img/Meter-90.png";
+import { featureSlide } from "./SkillsOptions";
 import { useContext } from "react";
 import { AppContext } from "./context/AppContext";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -14,70 +7,9 @@ import "@splidejs/splide/css";
 
 
 
-
-
 const Skills = () => {
 
   const { skillRef } = useContext(AppContext);
-  
-  const featureSlide = [
-    {
-      id: 0,
-      name: "React.js",
-      title: "Web Development",
-      img: features01,
-      percent: "90%",
-    },
-    {
-      id: 1,
-      name: "Next.js",
-      title: "Web Development",
-      img: features02,
-      percent: "60%",
-    },
-    {
-      id: 2,
-      name: "React Native",
-      title: "Mobile App Development",
-      img: features03,
-      percent: "90%",
-    },
-    {
-      id: 3,
-      name: "Node.js",
-      title: "Server Side Development",
-      img: features04,
-      percent: "60%",
-    },
-    {
-      id: 4,
-      name: "Python",
-      title: "Software Development",
-      img: features05,
-      percent: "60%",
-    },
-    {
-      id: 5,
-      name: "Premiere Pro",
-      title: "Video Content Creation",
-      img: features06,
-      percent: "97%",
-    },
-    {
-      id: 6,
-      name: "Photoshop",
-      title: "Photo Editing Graphics Design",
-      img: features07,
-      percent: "90%",
-    },
-    {
-      id: 7,
-      name: "After Effects",
-      title: "Video Effects Creation",
-      img: features08,
-      percent: "90%",
-    },
-  ];
 
   const splideOptions = {
     // width: "90%",
@@ -142,18 +74,10 @@ const Skills = () => {
                 <SplideSlide key={card.id}>
                   <div className="w-full flex flex-col justify-center items-center">
 
-                    <div className="xs:w-[90%] w-[96%] flex flex-col justify-center items-center relative">
-
+                    <div className="xs:w-[90%] w-[96%] flex flex-col justify-center items-center">
                       <img src={card.img} alt={card.name} 
                         className="bg-center bg-cover sm:w-[86%] sm:h-[86%] xs:w-[80%] xs:h-[80%] 
                           w-[95%] h-[95%]"/>
-
-                      <div className="text-white absolute z-[2] md:top-[45%] md:right-[41%] 
-                        sm:top-[42%] sm:right-[40%] xs:top-[43%] xs:right-[41%] top-[45%] right-[40%]
-                        font-semibold italic md:text-[25px] sm:text-[22px] text-[15px]">
-                        {card.percent}
-                      </div>
-
                     </div>
 
                     <div className="flex flex-col justify-center items-center xs:mt-0 mt-[20px]">

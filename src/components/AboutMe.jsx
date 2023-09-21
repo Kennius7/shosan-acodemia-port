@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ConnectButton from "./ConnectButton";
+import DownloadButton from "./DownloadButton";
 import { AppContext } from "./context/AppContext";
 
 
@@ -56,7 +56,7 @@ const AboutMe = () => {
             </div>
 
             <div className="w-full sm:mt-10 mt-4">
-              <ConnectButton buttonText="View my work"/>
+              <DownloadButton />
             </div>
 
           </div>

@@ -20,7 +20,7 @@ const { projectRef } = useContext(AppContext);
             md:w-[30%] md:h-[50px] sm:w-[45%] sm:h-[50px] xs:w-[40%] xs:h-[40px] w-[50%] h-[40px]`}>
 
             <div className="font-poppins md:tracking-wider tracking-normal font-bold text-center 
-                xs:text-[18px] text-[15px] xs:ml-5 ml-3">
+                md:text-[17px] xs:text-[18px] text-[15px] md:ml-[5%] xs:ml-5 ml-3">
                 {buttonText}
             </div>
 

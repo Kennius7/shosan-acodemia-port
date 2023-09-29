@@ -20,15 +20,15 @@ function DownloadButton() {
 
     return (
         <>
-            <a href={myResume} onClick={downloadClick} download>
+            <a href={myResume} onClick={downloadClick} target="_blank" rel="noreferrer" download>
                 <button
                     className={`flex justify-start items-center cursor-pointer rounded-[5px] duration-1000 
                     bg-white md:w-[30%] md:h-[50px] sm:w-[45%] sm:h-[50px] xs:w-[40%] xs:h-[40px] 
                     w-[50%] h-[40px]`}>
 
-                    <div className="font-poppins md:tracking-wider tracking-normal font-bold xs:text-center 
-                        text-start xs:leading-none leading-[16px] md:text-[17px] xs:text-[18px] text-[15px] 
-                        md:ml-[5%] xs:ml-5 ml-3">
+                    <div className="font-poppins md:tracking-wider tracking-normal font-semibold sm:text-center 
+                        text-start xs:leading-none leading-[16px] md:text-[17px] xs:text-[15px] text-[13px] 
+                        md:ml-[5%] xs:ml-[10%] ml-3">
                         {buttonText}
                     </div>
 

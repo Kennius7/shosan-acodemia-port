@@ -1,54 +1,20 @@
 import { useContext, useState } from "react";
 import ProjectCard1 from "./ProjectCard1";
 import ProjectCard2 from "./ProjectCard2";
-import projImg1 from "../assets/projectImages/Vampfi.jpg";
-import projImg2 from "../assets/projectImages/Globattle.jpg";
-import projImg3 from "../assets/projectImages/arcromride.jpg";
-import projImg4 from "../assets/projectImages/1.jpg";
-import projImg5 from "../assets/projectImages/2.jpg";
-import projImg6 from "../assets/projectImages/4.jpg";
+import ProjectCard3 from "./ProjectCard3";
+
 import { AppContext } from "./context/AppContext";
+import { softwareProjects } from "./SoftwareProjectData";
+import { contentProjects } from "./ContentProjectData";
+
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/css";
 
 
 
 
 const Projects = () => {
-
-  const softwareProjects = [
-    {
-      title: "Vamp Facility Intelligence Website",
-      description: "Front End Development and Design",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Glo Dance Battle Of The Year Website",
-      description: "Front End Development and Design",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Arcromride App",
-      description: "Mobile App Development",
-      imgUrl: projImg3,
-    },
-  ];
-
-  const contentProjects = [
-    {
-      title: "Business Startup",
-      description: "Content creation and Digital Marketing",
-      imgUrl: projImg4,
-    },
-    {
-      title: "Business Startup",
-      description: "Content creation and Digital Marketing",
-      imgUrl: projImg5,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg6,
-    },
-  ];
 
   const [active, setActive] = useState("software");
   const projectButton1 = "software";
@@ -56,15 +22,49 @@ const Projects = () => {
   const projectButton3 = "others";
   const { projectRef } = useContext(AppContext);
 
+  const splideOptions = {
+    // width: "90%",
+    perPage: 3,
+    perMove: 1,
+    type: 'loop',
+    keyboard: 'global',
+    autoplay: true,
+    rewind: true,
+    rewindSpeed: 2000,
+    isNavigation: false,
+    arrows: true,
+    focus: 0,
+    start: 0,
+    interval: 4000,
+    easing: "cubic-bezier()",
+    gap: '0.5rem',
+    pagination: false,
+    extensions: { AutoScroll },
+    autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    },
+    padding: '1rem',
+    mediaQuery: "min",
+    breakpoints: {
+      1000: { perPage: 3},
+      580: { perPage: 2},
+      100: { perPage: 1}
+    },
+  };
+  
 
   return (
-    <section ref={projectRef} className="project bg-black relative pt-[100px] mt-[200px] h-[1000px]">
+    <section ref={projectRef} 
+      className="project bg-black relative pt-[100px] mt-[200px] xs:h-[1000px] h-[800px]">
 
       <div className="">
 
         <div className="flex flex-col justify-center items-center mb-[40px]">
-          <h2 className="mb-[20px]">Projects</h2>
-          <p className="text-[20px] text-center text-[#B8B8B8] w-[55%]">
+          <h2 className="mb-[20px] sm:text-[45px] xs:text-[40px] text-[35px]">Projects</h2>
+          <p className="text-center text-[#B8B8B8] md:text-[20px] sm:text-[20px] 
+            xs:text-[18px] text-[16px] md:w-[55%] sm:w-[70%] xs:w-[80%] w-[90%]">
             Over the years, I&apos;ve worked on several projects ranging from software development 
             projects, all the way to content creation, and even Microwave telecoms projects.
             Below are a list of some of the notable ones I&apos;ve done. 
@@ -73,66 +73,98 @@ const Projects = () => {
 
         <div id="projects-tabs">
 
-          <div className="w-full flex mb-20 justify-center items-center text-white font-poppins 
+          <div className="w-full flex xs:mb-20 mb-10 justify-center items-center text-white font-poppins 
             font-semibold">
 
             <div className={`${active === projectButton1 
               ? "text-white duration-1000" 
               : "text-gray-500 duration-1000"} 
-              flex justify-center items-center border border-blue-500 border-r-0 rounded-l-[25px] 
-              hover:bg-blue-500 duration-1000 cursor-pointer w-[20%] h-[50px]`}
+              flex justify-center items-center border border-blue-500 border-r-0 rounded-l-[12px] 
+              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
+              sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px]`}
               onClick={() => setActive(projectButton1)}
             >
-              <div>Software Project</div>
+              <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
+                Software Projects
+              </div>
             </div>
-            
+
             <div className={`${active === projectButton2 
               ? "text-white duration-1000" 
               : "text-gray-500 duration-1000"} 
-              flex justify-center items-center border border-blue-500 border-x-0 w-[20%] h-[50px] 
-              hover:bg-blue-500 duration-1000 cursor-pointer`}
+              flex justify-center items-center border border-blue-500 border-x-0 md:w-[20%] 
+              sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px] 
+              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer`}
               onClick={() => setActive(projectButton2)}
             >
-              <div>Content Creation</div>
+              <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
+                Content Creation
+              </div>
             </div>
 
             <div className={`${active === projectButton3 
               ? "text-white duration-1000" 
               : "text-gray-500 duration-1000"} 
-              flex justify-center items-center border border-blue-500 border-l-0 rounded-r-[25px] 
-              hover:bg-blue-500 duration-1000 cursor-pointer w-[20%] h-[50px]`}
+              flex justify-center items-center border border-blue-500 border-l-0 rounded-r-[12px] 
+              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
+              sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px]`}
               onClick={() => setActive(projectButton3)}
             >
-              <div>Other Projects</div>
+              <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
+                Other Projects
+              </div>
             </div>
 
           </div>
 
           <div id="slideInUp" className="">
 
-            <div className={`${active === projectButton1 ? "block" : "hidden"}`}>
-              <div className="w-full flex justify-around items-center">
+            <div className={`${active === projectButton1 ? "block" : "hidden"} 
+              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+              <Splide options={splideOptions} 
+                className="w-full flex justify-around items-center">
                 {
                   softwareProjects.map((project, index) => {
-                    return (<ProjectCard1 key={index} {...project}/>)
+                    return (
+                      <SplideSlide key={index}>
+                        <ProjectCard1 {...project}/>
+                      </SplideSlide>
+                    )
                   })
                 }
-              </div>
+              </Splide>
             </div>
 
-            <div className={`${active === projectButton2 ? "block" : "hidden"}`}>
-              <div className="w-full flex justify-around items-center">
+            <div className={`${active === projectButton2 ? "block" : "hidden"} 
+              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+              <Splide options={splideOptions} 
+                className="w-full flex justify-around items-center">
                 {
                   contentProjects.map((project1, index1) => {
-                    return (<ProjectCard2 key={index1} {...project1}/>)
+                    return (
+                      <SplideSlide key={index1}>
+                        <ProjectCard2 {...project1}/>
+                      </SplideSlide>
+                    )
                   })
                 }
-              </div>
+              </Splide>
             </div>
 
             <div className={`${active === projectButton3 ? "block" : "hidden"} 
-              text-white flex justify-center items-center`}>
-              <p>Project listings coming soon.</p>
+              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+                <Splide options={splideOptions} 
+                  className="w-full flex justify-around items-center">
+                  {
+                    contentProjects.map((project1, index1) => {
+                      return (
+                        <SplideSlide key={index1}>
+                          <ProjectCard3 {...project1}/>
+                        </SplideSlide>
+                      )
+                    })
+                  }
+                </Splide>
             </div>
 
           </div>

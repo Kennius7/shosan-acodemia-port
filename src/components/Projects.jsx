@@ -1,8 +1,5 @@
 import { useContext, useState } from "react";
-import ProjectCard1 from "./ProjectCard1";
-import ProjectCard2 from "./ProjectCard2";
-import ProjectCard3 from "./ProjectCard3";
-
+import ProjectCard from "./ProjectCard";
 import { AppContext } from "./context/AppContext";
 import { softwareProjects } from "./SoftwareProjectData";
 import { contentProjects } from "./ContentProjectData";
@@ -129,7 +126,7 @@ const Projects = () => {
                   softwareProjects.map((project, index) => {
                     return (
                       <SplideSlide key={index}>
-                        <ProjectCard1 {...project}/>
+                        <ProjectCard {...project}/>
                       </SplideSlide>
                     )
                   })
@@ -142,10 +139,10 @@ const Projects = () => {
               <Splide options={splideOptions} 
                 className="w-full flex justify-around items-center">
                 {
-                  contentProjects.map((project1, index1) => {
+                  contentProjects.map((project, index) => {
                     return (
-                      <SplideSlide key={index1}>
-                        <ProjectCard2 {...project1}/>
+                      <SplideSlide key={index}>
+                        <ProjectCard {...project}/>
                       </SplideSlide>
                     )
                   })
@@ -158,10 +155,10 @@ const Projects = () => {
                 <Splide options={splideOptions} 
                   className="w-full flex justify-around items-center">
                   {
-                    contentProjects.map((project1, index1) => {
+                    contentProjects.map((project, index) => {
                       return (
-                        <SplideSlide key={index1}>
-                          <ProjectCard3 {...project1}/>
+                        <SplideSlide key={index}>
+                          <ProjectCard {...project}/>
                         </SplideSlide>
                       )
                     })

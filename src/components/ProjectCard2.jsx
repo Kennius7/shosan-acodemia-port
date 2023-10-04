@@ -1,4 +1,4 @@
-// import { Col } from "react-bootstrap";
+
 
 const ProjectCard2 = ({ ...project }) => {
 

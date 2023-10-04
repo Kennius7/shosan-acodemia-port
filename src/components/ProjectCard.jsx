@@ -1,10 +1,12 @@
 
 
-const ProjectCard1 = ({ ...project }) => {
+const ProjectCard = ({ ...project }) => {
   return (
     <div className="w-[100%] xs:h-[300px] h-[200px]">
       <div className="proj-imgbx w-full h-full">
-        <img src={project.imgUrl} alt="project pics" className="h-full object-cover" />
+        <img src={project.imgUrl} 
+          alt="project pics" 
+          className="w-full h-full object-cover" />
         <div className="proj-txtx">
           <h4>{project.title}</h4>
           <span>{project.description}</span>
@@ -15,4 +17,4 @@ const ProjectCard1 = ({ ...project }) => {
 }
 
 
-export default ProjectCard1
+export default ProjectCard

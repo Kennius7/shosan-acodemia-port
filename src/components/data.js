@@ -18,6 +18,13 @@ import features17 from "../assets/img/Logos edits TailwindCSS.png";
 import features18 from "../assets/img/Logos edits CSS3.png";
 import features19 from "../assets/img/Logos edits HTML5.png";
 
+import projImg1 from "../assets/projectImages/Vampfi.jpg";
+import projImg2 from "../assets/projectImages/Globattle.jpg";
+import projImg3 from "../assets/projectImages/arcromride.jpg";
+import projImg4 from "../assets/projectImages/1.jpg";
+import projImg5 from "../assets/projectImages/2.jpg";
+import projImg6 from "../assets/projectImages/4.jpg";
+
 
 
 export const featureSlide = [
@@ -137,5 +144,46 @@ export const featureSlide = [
     },
   ];
 
+export const softwareProjects = [
+    {
+      title: "Vamp Facility Intelligence Website",
+      description: "Front End Development and Design",
+      imgUrl: projImg1,
+      buttonTitle: "Vamp Website"
+    },
+    {
+      title: "Glo Dance Battle Of The Year Website",
+      description: "Front End Development and Design",
+      imgUrl: projImg2,
+      buttonTitle: "Glo Dance Battle"
+    },
+    {
+      title: "Arcromride App",
+      description: "Mobile App Development",
+      imgUrl: projImg3,
+      buttonTitle: "Arcromride Website"
+    },
+  ];
+
+export const contentProjects = [
+    {
+      title: "Business Startup",
+      description: "Content creation and Digital Marketing",
+      imgUrl: projImg4,
+      buttonTitle: "Instagram link1"
+    },
+    {
+      title: "Business Startup",
+      description: "Content creation and Digital Marketing",
+      imgUrl: projImg5,
+      buttonTitle: "Instagram link2"
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg6,
+      buttonTitle: "Instagram link3"
+    },
+  ];
 
 

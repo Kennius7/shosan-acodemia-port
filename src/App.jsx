@@ -16,6 +16,7 @@ import ScrollToTop from './ScrollToTop';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const [active, setActive] = useState("Home");
   const homeRef = useRef();
   const aboutRef = useRef();
@@ -68,7 +69,10 @@ function App() {
 
 
   return (
-    <AppContext.Provider value={{ homeRef, aboutRef, skillRef, projectRef, connectRef, active, setActive, navLinks}}>
+    <AppContext.Provider value={{ 
+      homeRef, aboutRef, skillRef, projectRef, 
+      connectRef, active, setActive, navLinks, clicked, setClicked
+    }}>
 
       <BrowserRouter>
 

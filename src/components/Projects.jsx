@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { AppContext } from "./context/AppContext";
-import { softwareProjects } from "./SoftwareProjectData";
-import { contentProjects } from "./ContentProjectData";
+import { softwareProjects, contentProjects } from "./data.js";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";

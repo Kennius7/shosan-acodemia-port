@@ -1,4 +1,4 @@
-import { featureSlide } from "./SkillsOptions";
+import { featureSlide } from "./data";
 import { useContext } from "react";
 import { AppContext } from "./context/AppContext";
 import { Splide, SplideSlide } from "@splidejs/react-splide";

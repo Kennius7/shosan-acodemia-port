@@ -23,7 +23,7 @@ import projImg2 from "../assets/projectImages/FriendnPal-Screenshot.webp";
 import projImg3 from "../assets/projectImages/Matic Drive-Screenshot.webp";
 import projImg4 from "../assets/projectImages/Arcromride-Screenshot.webp";
 import projImg5 from "../assets/projectImages/Shosan CBT-Screenshot.webp";
-import projImg6 from "../assets/projectImages/4.jpg";
+import projImg6 from "../assets/projectImages/Judyhub-Screenshot.webp";
 import projImg7 from "../assets/projectImages/4.jpg";
 import projImg8 from "../assets/projectImages/4.jpg";
 
@@ -180,6 +180,12 @@ export const softwareProjects = [
         imgUrl: projImg5,
         buttonTitle: "Computer Test Link",
         url: "https://shosan-computer-based-test.netlify.app/",
+    },
+    {   title: "Judyhub Website",
+        description: "Front End Development and Design",
+        imgUrl: projImg6,
+        buttonTitle: "Judyhub Link",
+        url: "https://judyhub.netlify.app/",
     },
   ];
 

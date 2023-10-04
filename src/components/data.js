@@ -19,11 +19,13 @@ import features18 from "../assets/img/Logos edits CSS3.png";
 import features19 from "../assets/img/Logos edits HTML5.png";
 
 import projImg1 from "../assets/projectImages/Vampfi.jpg";
-import projImg2 from "../assets/projectImages/Globattle.jpg";
-import projImg3 from "../assets/projectImages/arcromride.jpg";
-import projImg4 from "../assets/projectImages/1.jpg";
-import projImg5 from "../assets/projectImages/2.jpg";
+import projImg2 from "../assets/projectImages/FriendnPal-Screenshot.webp";
+import projImg3 from "../assets/projectImages/Matic Drive-Screenshot.webp";
+import projImg4 from "../assets/projectImages/Arcromride-Screenshot.webp";
+import projImg5 from "../assets/projectImages/Shosan CBT-Screenshot.webp";
 import projImg6 from "../assets/projectImages/4.jpg";
+import projImg7 from "../assets/projectImages/4.jpg";
+import projImg8 from "../assets/projectImages/4.jpg";
 
 
 
@@ -149,39 +151,57 @@ export const softwareProjects = [
       title: "Vamp Facility Intelligence Website",
       description: "Front End Development and Design",
       imgUrl: projImg1,
-      buttonTitle: "Vamp Website"
+      buttonTitle: "Vampfi Link",
+      url: "https://vampfi.com/",
     },
     {
-      title: "Glo Dance Battle Of The Year Website",
+      title: "FriendnPal Website",
       description: "Front End Development and Design",
       imgUrl: projImg2,
-      buttonTitle: "Glo Dance Battle"
+      buttonTitle: "FriendnPal Link",
+      url: "https://friendnpal.com",
     },
     {
-      title: "Arcromride App",
-      description: "Mobile App Development",
+      title: "Matic Drive Website",
+      description: "Front End Development and Design",
       imgUrl: projImg3,
-      buttonTitle: "Arcromride Website"
+      buttonTitle: "Matic Drive Link",
+      url: "https://maticdrive.com",
+    },
+    {
+        title: "Arcromride App",
+        description: "Mobile App Development",
+        imgUrl: projImg4,
+        buttonTitle: "Arcromride Link",
+        url: "https://www.arcromride.com/",
+    },
+    {   title: "Computer based test",
+        description: "Front End Development and Design",
+        imgUrl: projImg5,
+        buttonTitle: "Computer Test Link",
+        url: "https://shosan-computer-based-test.netlify.app/",
     },
   ];
+
+
 
 export const contentProjects = [
     {
       title: "Business Startup",
       description: "Content creation and Digital Marketing",
-      imgUrl: projImg4,
+      imgUrl: projImg6,
       buttonTitle: "Instagram link1"
     },
     {
       title: "Business Startup",
       description: "Content creation and Digital Marketing",
-      imgUrl: projImg5,
+      imgUrl: projImg7,
       buttonTitle: "Instagram link2"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg6,
+      imgUrl: projImg8,
       buttonTitle: "Instagram link3"
     },
   ];

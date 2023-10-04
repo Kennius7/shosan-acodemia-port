@@ -116,7 +116,7 @@ const Projects = () => {
           <div id="slideInUp" className="">
 
             <div className={`${active === projectButton1 ? "block" : "hidden"} 
-              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+              w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
               <Splide options={splideOptions} 
                 className="w-full flex justify-around items-center">
                 {
@@ -132,7 +132,7 @@ const Projects = () => {
             </div>
 
             <div className={`${active === projectButton2 ? "block" : "hidden"} 
-              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+              w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
               <Splide options={splideOptions} 
                 className="w-full flex justify-around items-center">
                 {
@@ -148,7 +148,7 @@ const Projects = () => {
             </div>
 
             <div className={`${active === projectButton3 ? "block" : "hidden"} 
-              w-[90%] m-auto rounded-[10px] border-4 border-slate-800`}>
+              w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
                 <Splide options={splideOptions} 
                   className="w-full flex justify-around items-center">
                   {

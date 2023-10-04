@@ -35,7 +35,8 @@ const ProjectCard = ({ ...project }) => {
       <div className="w-full flex justify-center items-center">
         <button 
           onClick={()=>handleClick()}
-          className="text-white bg-black font-poppins rounded-[10px] p-2 absolute z-2 bottom-1">
+          className="text-white bg-[#030229]/80 font-poppins rounded-[10px] italic absolute z-2 bottom-1 
+            border-2 border-yellow-600/70 px-4 py-1 md:text-[12px] sm:text-[11px] xs:text-[12px] text-[11px]">
           {btnText}
         </button>
       </div>

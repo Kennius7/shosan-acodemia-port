@@ -46,19 +46,17 @@ const Projects = () => {
     padding: '1rem',
     mediaQuery: "min",
     breakpoints: {
-      1000: { perPage: 3},
+      1100: { perPage: 3},
       580: { perPage: 2},
       100: { perPage: 1}
     },
   };
-  
 
   return (
     <section ref={projectRef} 
       className="project bg-black relative pt-[100px] mt-[200px] xs:h-[1000px] h-[800px]">
 
-      <div className="">
-
+      <div>
         <div className="flex flex-col justify-center items-center mb-[40px]">
           <h2 className="mb-[20px] sm:text-[45px] xs:text-[40px] text-[35px]">Projects</h2>
           <p className="text-center text-[#B8B8B8] md:text-[20px] sm:text-[20px] 
@@ -168,7 +166,6 @@ const Projects = () => {
           </div>
 
         </div>
-
       </div>
 
     </section>

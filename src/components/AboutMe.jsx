@@ -35,21 +35,15 @@ const AboutMe = () => {
                   sm:mb-6 mb-3 xs:leading-[25px] leading-[20px]">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a software 
                   programmer, as well as a graphics designer, 
-                  video editor, and an audio editor. Presently, I am the CEO of Shosan&apos;s Acodemia, a startup 
-                  for web and software solutions. Shosan&apos;s Acodemia also has an academy for teaching programming 
-                  courses and trainings for related fields. <br/> <br/>
+                  video editor, and an audio editor. <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It has always been my passion to create new things, 
                   especially things with aesthetic value, hence my love for fine arts, computer based art and designs, 
                   and inevitably programming. Programming for me is a fascinating form of creativity, where you can 
                   type in lines of code, and voila, something new has been created! <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It was also my desire to see others who wanted to 
                   express their creativities in these same areas, 
-                  do so and find expression, that led me and motivated me to establish Shosan&apos;s Acodemia, 
-                  where people can be taught and guided on the journey to becoming the creative they always 
-                  wanted to be, especially as programmers. <br/> <br/>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Also at Shosan&apos;s Acodemia, we offer web 
-                  development, mobile app development, video creation 
-                  and graphics design services , etc. at affordable prices tailored to your business needs.
+                  do so and find expression, which has helped me on my journey to becoming a team player, 
+                  being able to work together with others while learning from each other. <br/> <br/>
                 </div>
               </div>
 

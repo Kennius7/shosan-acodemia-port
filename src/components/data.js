@@ -189,8 +189,6 @@ export const softwareProjects = [
     },
   ];
 
-
-
 export const contentProjects = [
     {
       title: "Business Startup",

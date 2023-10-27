@@ -1,11 +1,5 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
-import Banner from "./components/Banner";
-import AboutMe from "./components/AboutMe";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from './components/Contact';
+import { AboutMe, Skills, Projects, Contact, Navbar, Footer, Banner } from './components';
 import "animate.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useRef } from "react";
@@ -71,7 +65,8 @@ function App() {
   return (
     <AppContext.Provider value={{ 
       homeRef, aboutRef, skillRef, projectRef, 
-      connectRef, active, setActive, navLinks, clicked, setClicked
+      connectRef, active, setActive, navLinks, 
+      clicked, setClicked
     }}>
 
       <BrowserRouter>

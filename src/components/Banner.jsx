@@ -87,7 +87,7 @@ const Banner = () => {
               professionals who are striving to achieve a common goal/result.
             </p>
 
-            <WhatsappButton buttonText="Let's connect on" />
+            <WhatsappButton buttonText="Chat me on WhatsApp" />
 
           </div>
 

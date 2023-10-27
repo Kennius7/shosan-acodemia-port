@@ -12,8 +12,8 @@ const AboutMe = () => {
 
   return (
     <section id="aboutme" ref={aboutRef}
-      className="skill w-full relative flex flex-col justify-center items-center sm:h-[800px] xs:h-[800px] 
-        h-[700px] sm:mb-[200px] xs:mb-[50px] mb-[40px]">
+      className="skill w-full relative flex flex-col justify-center items-center md:h-[700px] sm:h-[800px] 
+        xs:h-[800px] h-[700px] sm:mb-[200px] xs:mb-[50px] mb-[40px]">
 
       <div className="flex flex-col justify-center items-center sm:rounded-[64px] xs:rounded-[50px] rounded-[30px] 
         bg-black/95 absolute z-[1] sm:top-0 xs:-top-[11%] -top-[15%] sm:py-[10%] py-[8%] sm:w-[80%] xs:w-[90%] 
@@ -31,11 +31,12 @@ const AboutMe = () => {
               </div>
 
               <div className="w-full">
-                <div className="w-full text-gray-300 text-start italic sm:text-[17px] text-[15px] 
-                  sm:mb-6 mb-3 xs:leading-[25px] leading-[20px]">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a software 
-                  programmer, as well as a graphics designer, 
-                  video editor, and an audio editor. <br/> <br/>
+                <div className="font-poppins w-full text-gray-300 text-start md:text-[19px] sm:text-[17px] 
+                  xs:text-[15px] text-[14px] sm:mb-1 mb-3 md:leading-[28px] xs:leading-[25px] leading-[20px]">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a front end 
+                  React developer majorly, but with proficiency in mobile app development, graphics design, 
+                  and video editing. I have about three &#40;3&#41; years of experience in web development 
+                  and I have worked with professional in other projects like Matic Drive, FriendnPal etc. <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It has always been my passion to create new things, 
                   especially things with aesthetic value, hence my love for fine arts, computer based art and designs, 
                   and inevitably programming. Programming for me is a fascinating form of creativity, where you can 
@@ -49,7 +50,7 @@ const AboutMe = () => {
 
             </div>
 
-            <div className="w-full sm:mt-10 mt-4">
+            <div className="w-full md:mt-4 sm:mt-4 mt-2">
               <DownloadButton />
             </div>
 

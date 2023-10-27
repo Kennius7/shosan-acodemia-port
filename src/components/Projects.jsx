@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { AppContext } from "./context/AppContext";
-import { softwareProjects, contentProjects } from "./data.js";
+import { softwareProjects, contentProjects, projectSplideOptions } from "./data.js";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/css";
 
 
@@ -18,39 +17,6 @@ const Projects = () => {
   const projectButton3 = "others";
   const { projectRef } = useContext(AppContext);
 
-  const splideOptions = {
-    // width: "90%",
-    perPage: 3,
-    perMove: 1,
-    type: 'loop',
-    speed: 1000,
-    keyboard: 'global',
-    autoplay: true,
-    autoplaySpeed: 3000,
-    rewind: true,
-    rewindSpeed: 2000,
-    isNavigation: false,
-    arrows: true,
-    focus: 0,
-    start: 0,
-    interval: 4000,
-    easing: "linear",
-    gap: '0.5rem',
-    pagination: false,
-    extensions: { AutoScroll },
-    autoScroll: {
-        speed: 1,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-    },
-    padding: '1rem',
-    mediaQuery: "min",
-    breakpoints: {
-      1100: { perPage: 3},
-      580: { perPage: 2},
-      100: { perPage: 1}
-    },
-  };
 
   return (
     <section ref={projectRef} 
@@ -117,7 +83,7 @@ const Projects = () => {
 
             <div className={`${active === projectButton1 ? "block" : "hidden"} 
               w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
-              <Splide options={splideOptions} 
+              <Splide options={projectSplideOptions} 
                 className="w-full flex justify-around items-center">
                 {
                   softwareProjects.map((project, index) => {
@@ -133,7 +99,7 @@ const Projects = () => {
 
             <div className={`${active === projectButton2 ? "block" : "hidden"} 
               w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
-              <Splide options={splideOptions} 
+              <Splide options={projectSplideOptions} 
                 className="w-full flex justify-around items-center">
                 {
                   contentProjects.map((project, index) => {
@@ -149,7 +115,7 @@ const Projects = () => {
 
             <div className={`${active === projectButton3 ? "block" : "hidden"} 
               w-[98%] m-auto rounded-[10px] border-4 border-slate-800`}>
-                <Splide options={splideOptions} 
+                <Splide options={projectSplideOptions} 
                   className="w-full flex justify-around items-center">
                   {
                     contentProjects.map((project, index) => {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import logo from "../assets/img/Shosan-Acodemia-Logo-small2.png";
+import logo from "../assets/img/shosanacodemia-logo111.png";
 import menu from "../assets/img/menu.svg";
 import close from "../assets/img/close.svg";
 import { useContext } from 'react';
@@ -41,10 +41,10 @@ function Navbar() {
 
                 <a href="/" className="flex justify-center items-center md:w-[20%] sm:w-[20%] 
                     xs:w-[22%] w-[23%]">
-                    <img src={logo} alt="Maticdrive logo"
+                    <img src={logo} alt="Shosanacodemia logo"
                         className={`${scrolled
                             ? "w-[70%] h-[70%] xs:w-[40px] xs:h-[40px] sm:w-[40%] sm:h-[40%] md:w-[35px] md:h-[35px] duration-1000"
-                            : "w-[80%] h-[80%] xs:w-[45px] xs:h-[45px] sm:w-[45%] sm:h-[45%] md:w-[40px] md:h-[40px] duration-1000"} 
+                            : "w-[80%] h-[80%] xs:w-[42px] xs:h-[42px] sm:w-[45%] sm:h-[45%] md:w-[40px] md:h-[40px] duration-1000"} 
                             m-2`}
                     />
                 </a>
@@ -106,17 +106,22 @@ function Navbar() {
 
                     <div
                         className={`${!toggle ? "hidden" : "flex"} 
-                        p-4 xs:p-4 sm:p-10 bg-black-gradient absolute top-14 xs:top-16 sm:top-24 right-0 
-                        w-[120px] xs:w-[150px] sm:w-[260px] mr-2 sm:mr-4 rounded-[10px] sm:rounded-[15px] sidebar 
+                        p-4 xs:p-4 sm:p-8 bg-black-gradient absolute top-14 xs:top-16 sm:top-20 right-0 
+                        w-[35%] xs:w-[150px] sm:w-[240px] mr-2 sm:mr-4 rounded-[10px] sm:rounded-[18px] sidebar 
                         flex-col opacity-90 z-20`}
                     >
-                        <ul className="list-none flex justify-center flex-col mb-1 xs:mb-1 sm:mb-2">
+                        <ul className="list-none flex justify-center flex-col mb-1 xs:mb-1 sm:mb-1">
                             {navLinks.map((nav) => (
                                 <li
                                     key={nav.id}
-                                    className={`font-poppins font-semibold cursor-pointer mb-2 xs:mb-3 
-                                    sm:mb-[20px] text-[15px] xs:text-[17px] sm:text-[30px] 
-                                    ${active === nav.title ? "text-white" : "text-dimWhite"}`}
+                                    className={`font-poppins font-semibold cursor-pointer text-[12px] 
+                                    xs:text-[15px] sm:text-[18px] 
+                                    ${active === nav.title 
+                                        ? "text-white" 
+                                        : "text-dimWhite"}
+                                    ${nav.id === "/connect" 
+                                        ? "sm:mb-0 xs:mb-1 mb-0" 
+                                        : "sm:mb-[16px] xs:mb-3 mb-2"}`}
                                     onClick={() => {
                                         setActive(nav.title);
                                         PageScroll(nav.ref);

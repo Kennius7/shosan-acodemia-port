@@ -26,10 +26,14 @@ import projImg5 from "../assets/projectImages/Shosan CBT-Screenshot.webp";
 import projImg6 from "../assets/projectImages/Judyhub-Screenshot.webp";
 import projImg7 from "../assets/projectImages/4.jpg";
 import projImg8 from "../assets/projectImages/4.jpg";
+import projImg9 from "../assets/projectImages/4.jpg";
+
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 
 
-export const featureSlide = [
+
+export const skillSetSlide = [
     {
       id: 0,
       name: "React.js",
@@ -69,7 +73,7 @@ export const featureSlide = [
     {
       id: 6,
       name: "Photoshop",
-      title: "Photo Editing Graphics Design",
+      title: "Graphics Design",
       img: features07,
     },
     {
@@ -193,21 +197,90 @@ export const contentProjects = [
     {
       title: "Business Startup",
       description: "Content creation and Digital Marketing",
-      imgUrl: projImg6,
+      imgUrl: projImg7,
       buttonTitle: "Instagram link1"
     },
     {
       title: "Business Startup",
       description: "Content creation and Digital Marketing",
-      imgUrl: projImg7,
+      imgUrl: projImg8,
       buttonTitle: "Instagram link2"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg8,
+      imgUrl: projImg9,
       buttonTitle: "Instagram link3"
     },
   ];
+
+export const projectSplideOptions = {
+    // width: "90%",
+    perPage: 3,
+    perMove: 1,
+    type: 'loop',
+    speed: 1000,
+    keyboard: 'global',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    rewind: true,
+    rewindSpeed: 2000,
+    isNavigation: false,
+    arrows: true,
+    focus: 0,
+    start: 0,
+    interval: 4000,
+    easing: "linear",
+    gap: '0.5rem',
+    pagination: false,
+    extensions: { AutoScroll },
+    autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    },
+    padding: '1rem',
+    mediaQuery: "min",
+    breakpoints: {
+      1100: { perPage: 3},
+      580: { perPage: 2},
+      100: { perPage: 1}
+    },
+  };
+
+export const skillSplideOptions = {
+    // width: "90%",
+    perPage: 4,
+    perMove: 1,
+    type: 'loop',
+    speed: 1000,
+    keyboard: 'global',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    rewind: true,
+    rewindSpeed: 2000,
+    isNavigation: false,
+    arrows: true,
+    focus: 0,
+    start: 0,
+    interval: 4000,
+    easing: "linear",
+    gap: '0.5rem',
+    pagination: false,
+    extensions: { AutoScroll },
+    autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    },
+    padding: '1rem',
+    mediaQuery: "min",
+    breakpoints: {
+      1000: { perPage: 4},
+      580: { perPage: 3},
+      300: { perPage: 2},
+      100: { perPage: 1},
+    },
+  };
 
 

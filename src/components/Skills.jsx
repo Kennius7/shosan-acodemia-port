@@ -13,23 +13,27 @@ const Skills = () => {
 
   return (
     <section ref={skillRef}
-      className="skill w-full md:h-[750px] sm:h-[700px] xs:h-[400px] xxs:h-[380px] h-[800px] relative flex flex-col justify-center items-center">
+      className="skill relative flex flex-col justify-center items-center w-full md:h-[750px] 
+        sm:h-[700px] xs:h-[400px] xxs:h-[340px] h-[800px]">
 
       <div className="flex flex-col justify-center items-center w-full absolute z-[1] sm:top-[10%] 
         xs:-top-[4%] -top-[1%]">
 
-        <div className="flex flex-col justify-center items-start my-10 md:w-[43%] sm:w-[60%] 
-          xs:w-[78%] w-[90%] ml-1">
+        <div className="flex justify-center items-center xs:my-10 my-4 w-full">
 
-          <h2 className="text-start tracking-widest sm:text-[45px] xs:text-[33px] 
-            text-[30px] mb-2">
-            Skills
-          </h2>
-          <p className="text-start font-semibold sm:text-[22px] xs:text-[16px] text-[16px] 
-            font-poppins tracking-wider">
-            These are some of the skills and competencies I have acquired over the years, 
-            ranging from web development to graphic design, social media management and others.
-          </p>
+          <div className="flex flex-col justify-center items-start md:w-[55%] sm:w-[60%] 
+            xs:w-[78%] w-[90%] md:-ml-[20%] sm:-ml-[10%] xs:-ml-[7%] ml-[1%]">
+
+            <h2 className="text-start tracking-widest sm:text-[45px] xs:text-[33px] text-[30px] mb-2">
+              Skills
+            </h2>
+            <p className="text-start font-semibold md:text-[22px] sm:text-[20px] xs:text-[15px] text-[14px] 
+              font-poppins tracking-wider">
+              These are some of the skills and competencies I have acquired over the years, 
+              ranging from web development to graphic design, social media management and others.
+            </p>
+
+          </div>
 
         </div>
 

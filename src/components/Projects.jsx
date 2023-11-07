@@ -39,10 +39,10 @@ const Projects = () => {
             font-semibold">
 
             <div className={`${active === projectButton1 
-              ? "text-white duration-1000" 
-              : "text-gray-500 duration-1000"} 
+              ? "text-white duration-1000 bg-blue-500" 
+              : "text-gray-500 duration-1000 bg-transparent"} 
               flex justify-center items-center border border-blue-500 border-r-0 rounded-l-[12px] 
-              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
+              hover:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
               sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px]`}
               onClick={() => setActive(projectButton1)}
             >
@@ -52,11 +52,11 @@ const Projects = () => {
             </div>
 
             <div className={`${active === projectButton2 
-              ? "text-white duration-1000" 
-              : "text-gray-500 duration-1000"} 
+              ? "text-white duration-1000 bg-blue-500" 
+              : "text-gray-500 duration-1000 bg-transparent"} 
               flex justify-center items-center border border-blue-500 border-x-0 md:w-[20%] 
               sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px] 
-              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer`}
+              hover:bg-blue-500 duration-1000 cursor-pointer`}
               onClick={() => setActive(projectButton2)}
             >
               <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
@@ -65,10 +65,10 @@ const Projects = () => {
             </div>
 
             <div className={`${active === projectButton3 
-              ? "text-white duration-1000" 
-              : "text-gray-500 duration-1000"} 
+              ? "text-white duration-1000 bg-blue-500" 
+              : "text-gray-500 duration-1000 bg-transparent"} 
               flex justify-center items-center border border-blue-500 border-l-0 rounded-r-[12px] 
-              hover:bg-blue-500 focus:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
+              hover:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
               sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px]`}
               onClick={() => setActive(projectButton3)}
             >

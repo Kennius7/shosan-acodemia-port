@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
     <section id="aboutme" ref={aboutRef}
       className="skill w-full relative flex flex-col justify-center items-center md:h-[700px] sm:h-[800px] 
-        xs:h-[800px] h-[700px] sm:mb-[200px] xs:mb-[50px] mb-[40px]">
+        xs:h-[770px] h-[650px] sm:mb-[70px] xs:mb-0 mb-[10px]">
 
       <div className="flex flex-col justify-center items-center sm:rounded-[64px] xs:rounded-[50px] rounded-[30px] 
         bg-black/95 absolute z-[1] sm:top-0 xs:-top-[11%] -top-[15%] sm:py-[10%] py-[8%] sm:w-[80%] xs:w-[90%] 

@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import headerImg from "../assets/img/shosan-pics-small.png";
+import headerImg from "../assets/img/shosan-pics-small.webp";
 import WhatsappButton from "./WhatsappButton";
 import { AppContext } from "./context/AppContext";
 

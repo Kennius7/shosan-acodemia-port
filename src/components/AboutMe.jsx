@@ -36,11 +36,31 @@ const AboutMe = () => {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a front end 
                   React developer majorly, but with proficiency in mobile app development, graphics design, 
                   and video editing. I have about three &#40;3&#41; years of experience in web development 
-                  and I have worked with professional in other projects like Matic Drive, FriendnPal etc. <br/> <br/>
+                  and I have worked with professional in other projects like&nbsp;
+                  <a 
+                    href="https://maticdrive.com" 
+                    rel="noreferrer" 
+                    target="_blank" 
+                    className="text-blue-300">
+                    Matic Drive
+                  </a>,&nbsp;
+                  <a 
+                    href="https://friendnpal.com" 
+                    rel="noreferrer" 
+                    target="_blank" 
+                    className="text-blue-300">FriendnPal</a>&nbsp;etc. <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It has always been my passion to create new things, 
                   especially things with aesthetic value, hence my love for fine arts, computer based art and designs, 
                   and inevitably programming. Programming for me is a fascinating form of creativity, where you can 
-                  type in lines of code, and voila, something new has been created! <br/> <br/>
+                  type in lines of code, and voila, something new has been created! These, you can freely peruse 
+                  at my Github account,&nbsp;
+                  <a 
+                    href="https://github.com/Kennius7" 
+                    rel="noreferrer" 
+                    target="_blank" 
+                    className="text-blue-300">
+                    Kennius7
+                  </a> <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It was also my desire to see others who wanted to 
                   express their creativities in these same areas, 
                   do so and find expression, which has helped me on my journey to becoming a team player, 

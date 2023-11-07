@@ -57,7 +57,7 @@ const Projects = () => {
               flex justify-center items-center border border-blue-500 border-x-0 md:w-[20%] 
               sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px] 
               hover:bg-blue-500 duration-1000 cursor-pointer`}
-              onClick={() => setActive(projectButton2)}
+              // onClick={() => setActive(projectButton2)}
             >
               <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
                 Content Creation
@@ -70,7 +70,7 @@ const Projects = () => {
               flex justify-center items-center border border-blue-500 border-l-0 rounded-r-[12px] 
               hover:bg-blue-500 duration-1000 cursor-pointer md:w-[20%] 
               sm:w-[25%] xs:w-[30%] w-[32%] md:h-[50px] xs:h-[45px] h-[40px]`}
-              onClick={() => setActive(projectButton3)}
+              // onClick={() => setActive(projectButton3)}
             >
               <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
                 Other Projects

@@ -52,8 +52,8 @@ function Navbar() {
                 <a href="/" className="md:w-[80%] sm:w-[80%] xs:w-[78%] w-[70%]">
                     <div className="w-full flex flex-col justify-center items-center">
                         <div className={`${scrolled
-                            ? "md:text-[19px] sm:text-[25px] xs:text-[21px] text-[18px] duration-1000"
-                            : "md:text-[22px] sm:text-[30px] xs:text-[22px] text-[20px] duration-1000"} 
+                            ? "md:text-[19px] sm:text-[25px] xs:text-[21px] xxs:text-[18px] text-[16px] duration-1000"
+                            : "md:text-[22px] sm:text-[30px] xs:text-[22px] xxs:text-[20px] text-[18px] duration-1000"} 
                             font-semibold text-white w-full flex justify-start items-center`}>
                             Shosan&apos;s
                             <span className="text-grad">
@@ -107,15 +107,15 @@ function Navbar() {
                     <div
                         className={`${!toggle ? "hidden" : "flex"} 
                         p-4 xs:p-4 sm:p-8 bg-black-gradient absolute top-14 xs:top-16 sm:top-20 right-0 
-                        w-[35%] xs:w-[150px] sm:w-[240px] mr-2 sm:mr-4 rounded-[10px] sm:rounded-[18px] sidebar 
+                        w-[40%] xxs:w-[35%] xs:w-[150px] sm:w-[240px] mr-2 sm:mr-4 rounded-[10px] sm:rounded-[18px] sidebar 
                         flex-col opacity-90 z-20`}
                     >
                         <ul className="list-none flex justify-center flex-col mb-1 xs:mb-1 sm:mb-1">
                             {navLinks.map((nav) => (
                                 <li
                                     key={nav.id}
-                                    className={`font-poppins font-semibold cursor-pointer text-[12px] 
-                                    xs:text-[15px] sm:text-[18px] 
+                                    className={`font-poppins font-semibold cursor-pointer text-[11px] 
+                                    xxs:text-[12px] xs:text-[15px] sm:text-[18px] 
                                     ${active === nav.title 
                                         ? "text-white" 
                                         : "text-dimWhite"}

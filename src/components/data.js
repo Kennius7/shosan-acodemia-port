@@ -18,7 +18,7 @@ import features17 from "../assets/img/logos-edits-tailwindcss.webp";
 import features18 from "../assets/img/logos-edits-css3.webp";
 import features19 from "../assets/img/logos-edits-html5.webp";
 
-import projImg1 from "../assets/projectImages/Vampfi.webp";
+import projImg1 from "../assets/projectImages/vampfi.webp";
 import projImg2 from "../assets/projectImages/FriendnPal-Screenshot.webp";
 import projImg3 from "../assets/projectImages/Matic Drive-Screenshot.webp";
 import projImg4 from "../assets/projectImages/Arcromride-Screenshot.webp";

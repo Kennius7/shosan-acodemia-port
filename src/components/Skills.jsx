@@ -16,7 +16,7 @@ const Skills = () => {
       className="skill relative flex flex-col justify-center items-center w-full md:h-[750px] 
         sm:h-[700px] xs:h-[400px] xxs:h-[340px] h-[800px]">
 
-      <div className="flex flex-col justify-center items-center w-full absolute z-[1] sm:top-[10%] 
+      <div className="flex flex-col justify-center items-center w-full absolute z-[1] md:top-[20%] sm:top-[10%] 
         xs:-top-[4%] -top-[1%]">
 
         <div className="flex justify-center items-center xs:my-10 my-4 w-full">

@@ -27,9 +27,8 @@ const Projects = () => {
           <h2 className="mb-[20px] sm:text-[45px] xs:text-[40px] text-[35px]">Projects</h2>
           <p className="text-center text-[#B8B8B8] md:text-[20px] sm:text-[20px] 
             xs:text-[18px] text-[16px] md:w-[55%] sm:w-[70%] xs:w-[80%] w-[90%]">
-            Over the years, I&apos;ve worked on several projects ranging from software development 
-            projects, all the way to content creation, and even Microwave telecoms projects.
-            Below are a list of some of the notable ones I&apos;ve done. 
+            Over the years, I&apos;ve worked on a number of projects. 
+            Below are a list of some of the notable ones I&apos;ve done.
           </p>
         </div>
 

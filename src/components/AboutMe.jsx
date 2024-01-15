@@ -35,9 +35,10 @@ const AboutMe = () => {
                   xs:text-[15px] xxs:text-[14px] text-[12px] sm:mb-1 mb-3 md:leading-[28px] xs:leading-[25px] 
                   leading-[20px]">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a front end 
-                  React developer majorly, but with proficiency in mobile app development, graphics design, 
-                  and video editing. I have about four &#40;3&#41; years of experience in web development 
-                  and I have worked with professional in other projects like&nbsp;
+                  React developer majorly, but with some proficiency in back end development (NodeJS), 
+                  mobile app development, graphics design, 
+                  and video editing. I have about four &#40;4&#41; years of experience in web development 
+                  and I have worked with professionals in other projects like&nbsp;
                   <a 
                     href="https://maticdrive.com" 
                     rel="noreferrer" 

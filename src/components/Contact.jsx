@@ -52,6 +52,7 @@ const Contact = () => {
         setButtonText("Send Message")
         setStatusText("I'd like to hear from you...");
       }, 4000);
+      return;
     }
 
     if (
@@ -65,38 +66,48 @@ const Contact = () => {
               setButtonText("Send Message")
               setStatusText("I'd like to hear from you...");
             }, 5000);
+      return;
     }
 
-    else {
-      setButtonText("Sending...");
-      emailjs.sendForm('service_n10fnh6', 'template_zx24zti', form.current, 'h-F7iEPReaPmY032e')
-      .then((result) => {
-        console.log(result.text, result.status);
-        setTimeout(() => {
-          setStatus({ success: true, message: 'Message sent successfully'});
-          setButtonText("Message Sent")
-        }, 3000);
-        setTimeout(() => {
-          e.target.reset();
-          setButtonText("Send Message");
-          setStatus({});
-        }, 7000);
-      }, (error) => {
-        console.log(error.text, error.status);
-        setTimeout(() => {
-          setStatus({ success: false, message: 'Something went wrong, please try again later.'});
-          setButtonText("Message Not Sent");
-        }, 3000);
-        setTimeout(() => {
-          // e.target.reset();
-          setButtonText("Please Try Again");
-        }, 7000);
-        setTimeout(() => {
-          setButtonText("Send Message");
-          setStatus({});
-        }, 11000);
-      });
-    }
+    if (phone.toString().length < 10 || phone.toString().length > 10) {
+          setButtonText("Send?");
+          setStatusText("Phone number should be 10 digits long");
+          setTimeout(() => {
+            setButtonText("Send Message")
+            setStatusText("I'd like to hear from you...");
+          }, 5000);
+    return;
+  }
+
+
+    setButtonText("Sending...");
+    emailjs.sendForm('service_n10fnh6', 'template_zx24zti', form.current, 'h-F7iEPReaPmY032e')
+    .then((result) => {
+      console.log(result.text, result.status);
+      setTimeout(() => {
+        setStatus({ success: true, message: 'Message sent successfully'});
+        setButtonText("Message Sent")
+      }, 3000);
+      setTimeout(() => {
+        e.target.reset();
+        setButtonText("Send Message");
+        setStatus({});
+      }, 7000);
+    }, (error) => {
+      console.log(error.text, error.status);
+      setTimeout(() => {
+        setStatus({ success: false, message: 'Something went wrong, please try again later.'});
+        setButtonText("Message Not Sent");
+      }, 3000);
+      setTimeout(() => {
+        // e.target.reset();
+        setButtonText("Please Try Again");
+      }, 7000);
+      setTimeout(() => {
+        setButtonText("Send Message");
+        setStatus({});
+      }, 11000);
+    });
   };
 
 
@@ -158,7 +169,7 @@ const Contact = () => {
                   <input type="text" 
                     value={phone} 
                     name="phone"
-                    placeholder="Phone No." 
+                    placeholder="Phone No: +234..."
                     onChange={(e) => onFormUpdate('phone', e.target.value)}
                     className="xs:text-[18px] text-[13px] mb-3 xs:py-3 py-2 xxs:pl-3 pl-2 xs:placeholder:text-[16px] 
                       xxs:placeholder:text-[15px] placeholder:text-[14px] placeholder:font-semibold"/>

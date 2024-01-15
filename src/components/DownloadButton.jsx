@@ -1,4 +1,4 @@
-import myResume from "../assets/docs/Kenny Ogbogu CV.pdf";
+import myResume from "../assets/docs/Kenny Dev CV January 2024.pdf";
 import { useState } from "react";
 
 
@@ -37,6 +37,7 @@ function DownloadButton() {
         </>
     )
 }
+
 
 
 export default DownloadButton

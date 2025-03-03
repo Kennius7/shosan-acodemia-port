@@ -37,8 +37,9 @@ const AboutMe = () => {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Kenny Ogbogu and I am a front end 
                   React developer majorly, but with some proficiency in back end development (NodeJS), 
                   mobile app development, graphics design, 
-                  and video editing. I have about four &#40;4&#41; years of experience in web development 
-                  and I have worked with professionals in other projects like&nbsp;
+                  and video editing. I have about more than three &#40;3&#41; years of experience in web 
+                  development, mobile app development, and I have worked with professionals in other 
+                  projects like&nbsp;
                   <a 
                     href="https://maticdrive.com" 
                     rel="noreferrer" 
@@ -50,7 +51,7 @@ const AboutMe = () => {
                     href="https://friendnpal.com" 
                     rel="noreferrer" 
                     target="_blank" 
-                    className="text-blue-300">FriendnPal</a> etc. <br/> <br/>
+                    className="text-blue-300">FriendnPal</a> and Ostream etc. <br/> <br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It has always been my passion to create new things, 
                   especially things with aesthetic value, hence my love for fine arts, computer based art and designs, 
                   and inevitably programming. Programming for me is a fascinating form of creativity, where you can 

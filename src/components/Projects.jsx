@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { AppContext } from "./context/AppContext";
@@ -20,21 +21,20 @@ const Projects = () => {
 
   return (
     <section ref={projectRef} 
-      className="project bg-black relative pt-[100px] mt-[200px] xs:h-[1000px] h-[800px]">
+      className="project bg-black relative pt-[100px] mt-[200px] xs:h-[1000px] h-[650px]">
 
       <div>
         <div className="flex flex-col justify-center items-center mb-[40px]">
           <h2 className="mb-[20px] sm:text-[45px] xs:text-[40px] text-[35px]">Projects</h2>
           <p className="text-center text-[#B8B8B8] md:text-[20px] sm:text-[20px] 
             xs:text-[18px] text-[16px] md:w-[55%] sm:w-[70%] xs:w-[80%] w-[90%]">
-            Over the years, I&apos;ve worked on a number of projects. 
-            Below are a list of some of the notable ones I&apos;ve done.
+            Over the years, I&apos;ve worked on a number of projects. Below are some of the notable ones.
           </p>
         </div>
 
         <div id="projects-tabs">
 
-          <div className="w-full flex xs:mb-20 mb-10 justify-center items-center text-white font-poppins 
+          {/* <div className="w-full flex xs:mb-20 mb-10 justify-center items-center text-white font-poppins 
             font-semibold">
 
             <div className={`${active === projectButton1 
@@ -73,6 +73,18 @@ const Projects = () => {
             >
               <div className="md:text-[18px] sm:text-[16px] xs:text-[14px] text-[10px] font-poppins">
                 Other Projects
+              </div>
+            </div>
+
+          </div> */}
+
+          <div className="w-full flex xs:mb-20 mb-10 justify-center items-center text-white font-poppins 
+            font-semibold">
+
+            <div className="text-white bg-blue-400 flex justify-center items-center 
+              border-2 border-blue-800 rounded-[12px] xs:w-[50%] w-[90%] md:h-[50px] xs:h-[45px] h-[40px]">
+              <div className="md:text-[20px] sm:text-[18px] xs:text-[17px] text-[16px] font-poppins">
+                Software Projects
               </div>
             </div>
 

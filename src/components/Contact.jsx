@@ -56,28 +56,28 @@ const Contact = () => {
     }
 
     if (
-        validatePassword(upperCaseRegex, phone) || 
-        validatePassword(lowerCaseRegex, phone) || 
-        validatePassword(specialCharRegex, phone)
+          validatePassword(upperCaseRegex, phone) || 
+          validatePassword(lowerCaseRegex, phone) || 
+          validatePassword(specialCharRegex, phone)
         ) {
-            setButtonText("Send?");
-            setStatusText("All phone number characters should be numbers");
-            setTimeout(() => {
-              setButtonText("Send Message")
-              setStatusText("I'd like to hear from you...");
-            }, 5000);
+      setButtonText("Send?");
+      setStatusText("All phone number characters should be numbers");
+      setTimeout(() => {
+        setButtonText("Send Message")
+        setStatusText("I'd like to hear from you...");
+      }, 5000);
       return;
     }
 
     if (phone.toString().length < 10 || phone.toString().length > 10) {
-          setButtonText("Send?");
-          setStatusText("Phone number should be 10 digits long");
-          setTimeout(() => {
-            setButtonText("Send Message")
-            setStatusText("I'd like to hear from you...");
-          }, 5000);
-    return;
-  }
+      setButtonText("Send?");
+      setStatusText("Phone number should be 10 digits long");
+      setTimeout(() => {
+        setButtonText("Send Message")
+        setStatusText("I'd like to hear from you...");
+      }, 5000);
+      return;
+    }
 
 
     setButtonText("Sending...");

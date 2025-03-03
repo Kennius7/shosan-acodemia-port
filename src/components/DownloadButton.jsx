@@ -1,4 +1,4 @@
-import myResume from "../assets/docs/Kenny Dev CV January 2024.pdf";
+import myResume from "../assets/docs/Kenny Dev CV Jan 2025.pdf";
 import { useState } from "react";
 
 
